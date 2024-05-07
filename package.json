@@ -17,11 +17,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "eslint": "8.57.0",
     "next": "^14.2.3",
+    "next-intl": "^3.12.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "styled-components": "^6.1.9"
+    "react-i18next": "^14.1.1"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
@@ -58,6 +60,7 @@
     "postcss-styled-syntax": "^0.6.4",
     "prettier": "^3.2.5",
     "prettier-eslint": "^16.3.0",
+    "sass": "^1.77.0",
     "stylelint": "^16.5.0",
     "stylelint-config-clean-order": "^5.4.2",
     "stylelint-config-standard": "^36.0.0",
