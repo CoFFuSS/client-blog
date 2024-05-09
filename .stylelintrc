@@ -1,11 +1,17 @@
 {
   "__comment__": "Remove customSyntax if you are not using styled-components",
   "extends": [
-    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
     "stylelint-config-clean-order"
   ],
-  "customSyntax": "postcss-styled-syntax",
   "rules": {
     "no-duplicate-selectors": true
-  }
+  },
+  "ignoreFiles": [
+    "**/*.tsx",
+    "**/*.ts",
+    "**/*.mjs",
+    "**/*.md",
+    "LICENSE"
+  ]
 }

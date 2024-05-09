@@ -10,7 +10,9 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "stylelint": "stylelint ./ --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "cypress:open": "cypress open",
@@ -64,6 +66,7 @@
     "stylelint": "^16.5.0",
     "stylelint-config-clean-order": "^5.4.2",
     "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
