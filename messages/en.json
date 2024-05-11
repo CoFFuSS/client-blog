@@ -2,5 +2,13 @@
   "home": {
     "title": "Home",
     "path": "/"
+  },
+  "header": {
+    "links": {
+      "Home": "Home",
+      "Blog": "Blog",
+      "About": "About",
+      "Contact": "Contact"
+    }
   }
 }

@@ -19,3 +19,5 @@ export const localePrefix = 'always';
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =
   createLocalizedPathnamesNavigation({ locales, localePrefix, pathnames });
+
+export type AppPathname = keyof typeof pathnames;
