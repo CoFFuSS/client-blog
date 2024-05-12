@@ -3,7 +3,8 @@
 import { useLocale } from 'next-intl';
 import { ChangeEvent, useTransition } from 'react';
 
-import { locales, usePathname, useRouter } from '@/navigation';
+import { usePathname, useRouter } from '@/navigation';
+import { locales } from '@/config';
 
 import styles from './styled.module.scss';
 

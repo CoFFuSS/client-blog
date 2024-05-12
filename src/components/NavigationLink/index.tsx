@@ -4,7 +4,8 @@ import { ComponentProps } from 'react';
 import cn from 'classnames';
 import { useSelectedLayoutSegment } from 'next/navigation';
 
-import { AppPathname, Link } from '@/navigation';
+import { Link } from '@/navigation';
+import { AppPathname } from '@/config';
 
 import styles from './styled.module.scss';
 

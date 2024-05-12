@@ -1,7 +1,7 @@
 export const routes = {
   home: '/',
-  blog: '/blog',
-  post: '/blog/[slug]',
+  blog: '/post',
+  post: '/post/:id',
   about: '/about',
   category: '/category',
   author: '/author',
