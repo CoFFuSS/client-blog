@@ -3,14 +3,17 @@
 import cn from 'classnames';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import Link from 'next/link';
 
 import { navLinks } from '@/constants/navLinks';
 import { Burger } from '@/components/Burger';
 import NavigationLink from '@/components/NavigationLink';
+import { routes } from '@/constants/routes';
 
 import styles from './styled.module.scss';
 
 import VideoModal from '../VideoModal';
+import LanguageSwitcher from '../LanguageSwitcher';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,11 +24,10 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <h4>Modsen Client Blog</h4>
-        <select>
-          <option value='rus' />
-          <option value='en' />
-        </select>
+        <h4>
+          <Link href={routes.home}>Modsen Client Blog</Link>
+        </h4>
+        <LanguageSwitcher />
       </div>
       <div>
         <div className={styles.menu}>
