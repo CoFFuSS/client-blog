@@ -10,6 +10,8 @@ import NavigationLink from '@/components/NavigationLink';
 
 import styles from './styled.module.scss';
 
+import VideoModal from '../VideoModal';
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('header');
@@ -37,7 +39,7 @@ export default function Header() {
                 <NavigationLink href={href}>{t(`links.${name}`)}</NavigationLink>
               </li>
             ))}
-            <button type='button'>Video about us</button>
+            <VideoModal buttonContent={t('button')} />
           </ul>
         </div>
       </div>
