@@ -11,5 +11,15 @@
       "Contact": "Contact"
     },
     "button": "Video about us"
+  },
+  "footer": {
+    "links": {
+      "Home": "Home",
+      "Blog": "Blog",
+      "About": "About",
+      "Contact": "Contact",
+      "Privacy": "Privacy Policy"
+    },
+    "button": "Subscribe"
   }
 }

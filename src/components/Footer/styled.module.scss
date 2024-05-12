@@ -1,0 +1,58 @@
+.footer {
+  @include respond('tablet') {
+    align-items: center;
+    justify-content: center;
+  }
+
+  display: flex;
+  padding: $s56 $s80;
+  background-color: $dark-blue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $s48;
+  color: $white;
+}
+
+.top {
+  @include respond('tablet') {
+    flex-direction: column;
+    gap: $s24;
+    align-items: center;
+  }
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  @include respond('tablet') {
+    flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction: row;
+  gap: $s24;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: $s64;
+
+  h1 {
+    @include respond('tablet') {
+      display: none;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  white-space: pre;
+}

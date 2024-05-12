@@ -1,4 +1,4 @@
-export const navLinks = [
+export const footerRoutes = [
   {
     name: 'Home',
     href: '/',
@@ -14,5 +14,9 @@ export const navLinks = [
   {
     name: 'Contact',
     href: '/contact',
+  },
+  {
+    name: 'Privacy',
+    href: '/privacy',
   },
 ];
