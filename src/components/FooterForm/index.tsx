@@ -3,7 +3,8 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 
-import { TypeFooterForm, footerFormSchema } from '@/utils/footerFormSchema';
+import { FooterFormFields, TypeFooterForm, footerFormSchema } from '@/utils/footerFormSchema';
+import { sendEmailFooter } from '@/utils/sendEmail';
 
 import styles from './styled.module.scss';
 
@@ -15,25 +16,34 @@ export default function FooterForm() {
     register,
     handleSubmit,
     formState: { isDirty, isValid, errors },
-  } = useForm<TypeFooterForm>({ resolver: zodResolver(footerFormSchema), mode: 'onChange' });
+  } = useForm<FooterFormFields>({ resolver: zodResolver(footerFormSchema), mode: 'onChange' });
 
-  const handleSendEmail = () => {};
+  const handleSendEmail = async (data: TypeFooterForm) => {
+    await sendEmailFooter(data.email);
+  };
 
   return (
     <div className={styles.container}>
       <h1>Subscribe to our news letter to get latest updates and news</h1>
-      <form onSubmit={handleSubmit(handleSendEmail)}>
-        <Input
-          {...register('email')}
-          dataCy='subscribes-email-input'
-          type='email'
-          name='email-input'
-        />
-        <h3>{errors && errors.email?.message}</h3>
+      <form
+        onSubmit={handleSubmit(handleSendEmail)}
+        className={styles.form}
+      >
+        <div className={styles.input}>
+          <Input
+            dataCy='subscribes-email-input'
+            type='email'
+            variant='primary'
+            {...register('email')}
+          />
+          <h5>{errors && errors.email?.message}</h5>
+        </div>
+
         <Button
           disabled={!isDirty || !isValid}
           dataCy='footer-form-button'
           variant='primary'
+          isSubmit
         >
           Subscribe
         </Button>

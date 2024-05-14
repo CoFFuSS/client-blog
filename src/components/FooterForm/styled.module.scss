@@ -4,8 +4,23 @@
   gap: $s64;
 
   h1 {
-    @include respond('tablet') {
+    @include respond('tabletLg') {
       display: none;
     }
   }
+
+  h5 {
+    color: $red;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: $s24;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
 }

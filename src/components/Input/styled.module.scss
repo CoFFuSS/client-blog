@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  border: 1px solid;
+}
+
+.input {
+  max-height: $s56;
+  padding: $s16 $s24;
+  background-color: inherit;
+  border: 1px solid;
+}
+
+.primary {
+  color: $gray;
+  border-color: $dark-gray;
+}
+
+.secondary {
+  color: $dark-blue;
+  border-color: $gray;
+}

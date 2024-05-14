@@ -19,12 +19,12 @@
 .top {
   @include respond('tablet') {
     flex-direction: column;
-    gap: $s24;
     align-items: center;
   }
 
   display: flex;
   flex-direction: row;
+  gap: $s24;
   align-items: center;
   justify-content: space-between;
 }
