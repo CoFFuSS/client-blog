@@ -19,7 +19,13 @@ export default function FooterForm() {
   } = useForm<FooterFormFields>({ resolver: zodResolver(footerFormSchema), mode: 'onChange' });
 
   const handleSendEmail = async (data: TypeFooterForm) => {
-    await sendEmailFooter(data.email);
+    try {
+      await sendEmailFooter(data.email);
+    } catch (err) {
+      const error = err as Error;
+
+      throw new Error(`Something went wrong:${error.message}`);
+    }
   };
 
   return (

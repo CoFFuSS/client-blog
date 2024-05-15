@@ -8,6 +8,8 @@ import FooterForm from '@/components/FooterForm';
 
 import styles from './styled.module.scss';
 
+import SocialWrapper from '../SocialWrapper';
+
 export default function Footer() {
   const t = useTranslations('footer');
 
@@ -29,11 +31,12 @@ export default function Footer() {
         <div className={styles.content}>
           <FooterForm />
         </div>
-        <div>
+        <div className={styles.bottom}>
           <div className={styles.contacts}>
             <span>Finstreet 118 2561 Fintown</span>
             <span>Hello@finsweet.com 020 7993 2905</span>
           </div>
+          <SocialWrapper />
         </div>
       </div>
     </footer>
