@@ -21,7 +21,8 @@ export default function Posts() {
 
   return (
     <section className={styles.container}>
-      <div>
+      <div className={styles.feature}>
+        <h1>Feature Post</h1>
         <FeaturedPost
           author={featuredAuthor}
           image={image}
@@ -32,7 +33,7 @@ export default function Posts() {
           buttonText={t('featured.post.readMoreBtn')}
         />
       </div>
-      <div>
+      <div className={styles.posts}>
         <h1>All Posts</h1>
         <div>
           {postsToShow.map(({ date, author, content, id }) => (

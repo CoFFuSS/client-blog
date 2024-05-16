@@ -8,3 +8,13 @@
   gap: $s32;
   padding: $s128 $s80;
 }
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: $s32;
+}
+
+.posts {
+  height: 100%;
+}

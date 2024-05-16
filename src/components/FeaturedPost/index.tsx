@@ -33,17 +33,20 @@ export default function FeaturedPost({
   const redirectOnClick = () => router.push(`${routes.blog}/${id}`);
 
   return (
-    <div>
+    <div className={styles.container}>
       <Image
         className={styles.image}
         src={image}
         alt='feature-post'
       />
-      <h6>
-        By <span>{author}</span> | {date}
-      </h6>
-      <h2>{title}</h2>
-      <h5>{content}</h5>
+      <div className={styles.text}>
+        <h6>
+          By <span>{author}</span> | {date}
+        </h6>
+        <h2>{title}</h2>
+        <h5>{content}</h5>
+      </div>
+
       <Button
         dataCy='feature-post-button'
         variant='primary'

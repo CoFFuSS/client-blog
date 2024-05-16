@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: $s32;
+
+  padding: $s128 $s80;
+
+  background-color: $lavender;
+}
+
+.content {
+  padding: $s80 $s92;
+}

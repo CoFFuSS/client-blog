@@ -1,7 +1,7 @@
 'use client';
 
 import { AbstractIntlMessages, NextIntlClientProvider } from 'next-intl';
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 
 import { pickMessages } from '@/utils/pickMessages';
 import { componentsToShow } from '@/constants/componentToShow';
@@ -46,11 +46,13 @@ export default function HomeComponent({ locale, messages }: HomeComponentProps) 
       messages={pickMessages(messages, 'home')}
     >
       <Hero />
-      {componentsToShow.slice(0, showItems).map(({ component: Component, id }) => (
-        <Component key={id} />
-      ))}
       <div>
-        <h3>ABIBUS</h3>
+        {componentsToShow.slice(0, showItems).map(({ component: Component, id }) => (
+          <Fragment key={id}>
+            <Component />
+          </Fragment>
+        ))}
+        <div ref={observerTarget} />
       </div>
     </NextIntlClientProvider>
   );
