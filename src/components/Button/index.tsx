@@ -5,7 +5,7 @@ import styles from './styled.module.scss';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode | string;
-  dataCy: string;
+  dataCy?: string;
   disabled?: boolean;
   isSubmit?: boolean;
   className?: string;

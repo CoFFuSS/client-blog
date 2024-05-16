@@ -15,7 +15,7 @@ export default function Hero() {
       <h6>{t('posted')}</h6>
       <h1 className={styles.title}>{t('title')}</h1>
       <h6>
-        {t('by')} <span>James West</span> | {t('date')}
+        {t('by')} <span className={styles.name}>James West</span> | {t('date')}
       </h6>
       <h6 className={styles.text}>{t('text')}</h6>
       <Button

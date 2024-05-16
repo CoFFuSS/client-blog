@@ -8,6 +8,18 @@
       "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "readMoreBtn": "Read More"
     },
+    "posts": {
+      "featured": {
+        "title": "Featured Post",
+        "post": {
+          "readMoreBtn": "Read More"
+        }
+      },
+      "all": {
+        "title": "All Posts",
+        "link": "View all"
+      }
+    },
     "title": "Home",
     "path": "/"
   },

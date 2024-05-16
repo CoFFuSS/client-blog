@@ -1,0 +1,10 @@
+.container {
+  @include respond('tablet') {
+    flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction: row;
+  gap: $s32;
+  padding: $s128 $s80;
+}
