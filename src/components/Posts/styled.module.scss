@@ -1,5 +1,5 @@
 .container {
-  @include respond('tablet') {
+  @include respond('desktop') {
     flex-direction: column;
   }
 
@@ -16,4 +16,15 @@
 
 .posts {
   height: 100%;
+
+  .posts-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .link {
+    color: $violet;
+  }
 }

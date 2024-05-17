@@ -1,7 +1,9 @@
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 import { postsToShow } from '@/constants/postsToShow';
 import { blogPosts } from '@/constants/blogPosts';
+import { routes } from '@/constants/routes';
 
 import styles from './styled.module.scss';
 
@@ -34,7 +36,12 @@ export default function Posts() {
         />
       </div>
       <div className={styles.posts}>
-        <h1>All Posts</h1>
+        <div className={styles['posts-header']}>
+          <h1>All Posts</h1>
+          <h6 className={styles.link}>
+            <Link href={routes.blog}>View all</Link>
+          </h6>
+        </div>
         <div>
           {postsToShow.map(({ date, author, content, id }) => (
             <PostCard
