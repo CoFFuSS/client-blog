@@ -1,13 +1,50 @@
 .container {
+  position: relative;
+
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: $s32;
 
-  padding: $s128 $s80;
-
   background-color: $lavender;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: -24px;
+    right: 0;
+
+    width: 70%;
+    height: 24px;
+
+    background: linear-gradient(to right, $yellow 75%, $violet 25%);
+  }
 }
 
 .content {
+  @include respond('desktop') {
+    flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction: row;
+  gap: $s64;
+  align-items: stretch;
+  justify-content: space-between;
+
   padding: $s80 $s92;
+
+  div {
+    flex: 1;
+  }
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: $s16;
+}
+
+.link {
+  color: $violet;
 }

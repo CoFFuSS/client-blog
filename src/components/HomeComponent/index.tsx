@@ -6,6 +6,8 @@ import { Fragment, useEffect, useRef, useState } from 'react';
 import { pickMessages } from '@/utils/pickMessages';
 import { componentsToShow } from '@/constants/componentToShow';
 
+import styles from './styled.module.scss';
+
 import Hero from '../Hero';
 
 interface HomeComponentProps {
@@ -46,7 +48,7 @@ export default function HomeComponent({ locale, messages }: HomeComponentProps) 
       messages={pickMessages(messages, 'home')}
     >
       <Hero />
-      <div>
+      <div className={styles.content}>
         {componentsToShow.slice(0, showItems).map(({ component: Component, id }) => (
           <Fragment key={id}>
             <Component />

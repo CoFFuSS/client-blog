@@ -118,3 +118,15 @@ h6 {
   font-size: $f16;
   line-height: $s24;
 }
+
+p {
+  @include respond('tablet') {
+    font-size: $f14;
+    line-height: 20px;
+  }
+
+  font-size: $f16;
+  font-weight: 400;
+  line-height: $s24;
+  color: $gray;
+}
