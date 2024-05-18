@@ -8,6 +8,7 @@
       "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "readMoreBtn": "Читать далее"
     },
+
     "posts": {
       "featured": {
         "title": "Избранный пост",
@@ -20,6 +21,7 @@
         "link": "Посмотреть все"
       }
     },
+
     "category": {
       "title": "Выберете категорию",
       "business": {
@@ -35,6 +37,13 @@
         "title": "Технологии"
       }
     },
+
+    "backstory": {
+      "subtitle": "Почему мы начали",
+      "title": "Мы начали с простой идеи и переросло в наше хобби",
+      "button": "Рассмотреть нашу историю"
+    },
+
     "title": "Главная",
     "path": "/"
   },

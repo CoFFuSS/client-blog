@@ -8,6 +8,7 @@
       "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "readMoreBtn": "Read More"
     },
+
     "posts": {
       "featured": {
         "title": "Featured Post",
@@ -20,6 +21,7 @@
         "link": "View all"
       }
     },
+
     "category": {
       "title": "Choose A Catagory",
       "business": {
@@ -36,9 +38,16 @@
       }
     },
 
+    "backstory": {
+      "subtitle": "Why we started",
+      "title": "It started out as a simple idea and evolved into our passion",
+      "button": "Discover our story"
+    },
+
     "title": "Home",
     "path": "/"
   },
+
   "header": {
     "links": {
       "Home": "Home",
@@ -48,6 +57,7 @@
     },
     "button": "Video about us"
   },
+
   "footer": {
     "links": {
       "Home": "Home",
