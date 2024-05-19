@@ -2,10 +2,9 @@ import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
 import { routes } from '@/constants/routes';
+import SocialWrapper from '@/components/SocialWrapper';
 
 import styles from './styled.module.scss';
-
-import SocialWrapper from '../SocialWrapper';
 
 interface AuthorCardProps {
   avatar: StaticImageData;

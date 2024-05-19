@@ -1,10 +1,9 @@
 import { useTranslations } from 'next-intl';
 
 import { categoryCards } from '@/constants/categoryCard';
+import CategoryCard from '@/components/CategoryCard';
 
 import styles from './styled.module.scss';
-
-import CategoryCard from '../CategoryCard';
 
 export default function ChooseCategory() {
   const t = useTranslations('home.category');

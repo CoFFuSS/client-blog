@@ -9,11 +9,10 @@ import { navLinks } from '@/constants/navLinks';
 import { Burger } from '@/components/Burger';
 import NavigationLink from '@/components/NavigationLink';
 import { routes } from '@/constants/routes';
+import VideoModal from '@/components/VideoModal';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 import styles from './styled.module.scss';
-
-import VideoModal from '../VideoModal';
-import LanguageSwitcher from '../LanguageSwitcher';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

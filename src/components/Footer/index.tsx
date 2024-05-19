@@ -5,10 +5,9 @@ import { footerRoutes } from '@/constants/footerRoutes';
 import NavigationLink from '@/components/NavigationLink';
 import { routes } from '@/constants/routes';
 import FooterForm from '@/components/FooterForm';
+import SocialWrapper from '@/components/SocialWrapper';
 
 import styles from './styled.module.scss';
-
-import SocialWrapper from '../SocialWrapper';
 
 export default function Footer() {
   const t = useTranslations('footer');

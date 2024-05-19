@@ -5,10 +5,9 @@ import { Fragment, useEffect, useRef, useState } from 'react';
 
 import { pickMessages } from '@/utils/pickMessages';
 import { componentsToShow } from '@/constants/componentToShow';
+import Hero from '@/components/Hero';
 
 import styles from './styled.module.scss';
-
-import Hero from '../Hero';
 
 interface HomeComponentProps {
   locale: string;

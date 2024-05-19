@@ -2,9 +2,9 @@
 
 import { useTranslations } from 'next-intl';
 
-import styles from './styled.module.scss';
+import Slider from '@/components/Slider';
 
-import Slider from '../Slider';
+import styles from './styled.module.scss';
 
 export default function Testimonials() {
   const t = useTranslations('home.testimonials');

@@ -4,11 +4,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import { testimonials } from '@/constants/testimonials';
+import { LeftArrow } from '@/components/Icons/LeftArrow';
+import { RightArrow } from '@/components/Icons/RightArrow';
 
 import styles from './styled.module.scss';
-
-import { LeftArrow } from '../Icons/LeftArrow';
-import { RightArrow } from '../Icons/RightArrow';
 
 export default function Slider() {
   const [activeSlide, setActiveSlide] = useState(0);

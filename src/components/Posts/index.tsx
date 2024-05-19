@@ -4,11 +4,10 @@ import Link from 'next/link';
 import { postsToShow } from '@/constants/postsToShow';
 import { blogPosts } from '@/constants/blogPosts';
 import { routes } from '@/constants/routes';
+import PostCard from '@/components/PostCard';
+import FeaturedPost from '@/components/FeaturedPost';
 
 import styles from './styled.module.scss';
-
-import FeaturedPost from '../FeaturedPost';
-import PostCard from '../PostCard';
 
 export default function Posts() {
   const t = useTranslations('home.posts');
