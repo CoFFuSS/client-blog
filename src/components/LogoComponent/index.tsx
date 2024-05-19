@@ -1,4 +1,4 @@
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,13 +8,14 @@ import { featuredLogos } from '@/constants/featuresLogos';
 import styles from './styled.module.scss';
 
 export default function LogoComponent() {
+  const t = useTranslations('home.logo');
   const locale = useLocale();
 
   return (
     <section className={styles.container}>
       <p>
-        <h6>We are</h6>
-        <h4>Featured in</h4>
+        <h6>{t('subtitle')}</h6>
+        <h4>{t('title')}</h4>
       </p>
 
       {featuredLogos.map(({ logo, alt }) => (

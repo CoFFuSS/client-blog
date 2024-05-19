@@ -40,8 +40,21 @@
 
     "backstory": {
       "subtitle": "Why we started",
-      "title": "It started out as a simple idea and evolved into our passion",
-      "button": "Discover our story"
+      "title": "It started out as a simple idea and evolved into our passion"
+    },
+
+    "authors": {
+      "title": "List of Authors"
+    },
+
+    "logo": {
+      "subtitle": "We are",
+      "title": "Featured In"
+    },
+
+    "testimonials": {
+      "subtitle": "TESTIMONIALs",
+      "title": "What people say about our blog"
     },
 
     "title": "Home",
