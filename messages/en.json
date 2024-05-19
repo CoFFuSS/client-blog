@@ -67,6 +67,11 @@
     "path": "/"
   },
 
+  "privacy": {
+    "title": "Privacy Policy",
+    "info": "Last Updated on 27th January 2022"
+  },
+
   "header": {
     "links": {
       "Home": "Home",
