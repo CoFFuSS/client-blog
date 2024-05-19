@@ -58,6 +58,12 @@
       "title": "Что люди говорят о нашем блоге"
     },
 
+    "join": {
+      "title": "Присоеденяйтесь к нашей команде что бы стать частью нашей истории",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "button": "Присоеденяйтесь сейчас"
+    },
+
     "title": "Главная",
     "path": "/"
   },

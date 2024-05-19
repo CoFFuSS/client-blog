@@ -2,6 +2,7 @@ import About from '@/components/About';
 import Author from '@/components/Authors';
 import Backstory from '@/components/Backstory';
 import ChooseCategory from '@/components/ChooseCategory';
+import Join from '@/components/Join';
 import LogoComponent from '@/components/LogoComponent';
 import Posts from '@/components/Posts';
 import Testimonials from '@/components/Testimonials';
@@ -14,4 +15,5 @@ export const componentsToShow = [
   { component: Author, id: 5 },
   { component: LogoComponent, id: 6 },
   { component: Testimonials, id: 7 },
+  { component: Join, id: 8 },
 ];
