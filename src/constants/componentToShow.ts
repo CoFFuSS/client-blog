@@ -2,6 +2,7 @@ import About from '@/components/About';
 import Author from '@/components/Authors';
 import Backstory from '@/components/Backstory';
 import ChooseCategory from '@/components/ChooseCategory';
+import LogoComponent from '@/components/LogoComponent';
 import Posts from '@/components/Posts';
 
 export const componentsToShow = [
@@ -10,4 +11,5 @@ export const componentsToShow = [
   { component: ChooseCategory, id: 3 },
   { component: Backstory, id: 4 },
   { component: Author, id: 5 },
+  { component: LogoComponent, id: 6 },
 ];

@@ -28,7 +28,6 @@ export default function AuthorCard({ avatar, name, role, company, id }: AuthorCa
       <h6>
         {role} @{company}
       </h6>
-
       <SocialWrapper />
     </div>
   );

@@ -1,8 +1,7 @@
 import { authors } from '@/constants/authors';
+import AuthorCard from '@/components/AuthorCard';
 
 import styles from './styled.module.scss';
-
-import AuthorCard from '../AuthorCard';
 
 export default function Author() {
   return (

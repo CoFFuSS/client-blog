@@ -1,0 +1,15 @@
+.container {
+  @include respond('desktop') {
+    flex-wrap: wrap;
+    gap: $s32;
+  }
+
+  @include respond('tablet') {
+    flex-direction: column;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $s16;
+}
