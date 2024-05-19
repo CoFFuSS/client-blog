@@ -1,0 +1,25 @@
+.container {
+  @include respond('desktop') {
+    flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction: row;
+  padding: $s80 $s128;
+  background-color: $light-yellow;
+}
+
+.divider {
+  @include respond('desktopLg') {
+    margin: 0 $s32;
+  }
+
+  @include respond('desktop') {
+    margin: $s32 0;
+  }
+
+  flex: 0 0 1px;
+  margin: 0 $s48;
+  opacity: $opacity30;
+  background-color: $gray;
+}

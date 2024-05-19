@@ -11,7 +11,7 @@ export default function LogoComponent() {
   const locale = useLocale();
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <p>
         <h6>We are</h6>
         <h4>Featured in</h4>
@@ -28,6 +28,6 @@ export default function LogoComponent() {
           />
         </Link>
       ))}
-    </div>
+    </section>
   );
 }
