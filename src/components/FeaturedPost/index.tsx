@@ -4,10 +4,9 @@ import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import { routes } from '@/constants/routes';
+import Button from '@/components/Button';
 
 import styles from './styled.module.scss';
-
-import Button from '../Button';
 
 interface FeaturedPostProps {
   author: string;

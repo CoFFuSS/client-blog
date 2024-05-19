@@ -4,10 +4,9 @@ import { useTranslations } from 'next-intl';
 
 import background from '@/assets/images/backstory-background.png';
 import { routes } from '@/constants/routes';
+import Button from '@/components/Button';
 
 import styles from './styled.module.scss';
-
-import Button from '../Button';
 
 export default function Backstory() {
   const t = useTranslations('home.backstory');
