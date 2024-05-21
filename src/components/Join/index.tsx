@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Button from '@/components/Button';
 import { routes } from '@/constants/routes';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function Join() {
   const t = useTranslations('home.join');

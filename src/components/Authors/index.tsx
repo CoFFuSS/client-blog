@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { authors } from '@/constants/authors';
 import AuthorCard from '@/components/AuthorCard';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function Author() {
   const t = useTranslations('home.authors');

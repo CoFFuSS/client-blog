@@ -7,7 +7,7 @@ import { routes } from '@/constants/routes';
 import PostCard from '@/components/PostCard';
 import FeaturedPost from '@/components/FeaturedPost';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function Posts() {
   const t = useTranslations('home.posts');

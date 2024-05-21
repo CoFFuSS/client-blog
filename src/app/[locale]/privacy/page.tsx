@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 
 import { ParamsLocale } from '@/types/common';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function Privacy({ params: { locale } }: ParamsLocale) {
   unstable_setRequestLocale(locale);

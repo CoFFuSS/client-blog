@@ -7,7 +7,7 @@ import { testimonials } from '@/constants/testimonials';
 import { LeftArrow } from '@/components/Icons/LeftArrow';
 import { RightArrow } from '@/components/Icons/RightArrow';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function Slider() {
   const [activeSlide, setActiveSlide] = useState(0);

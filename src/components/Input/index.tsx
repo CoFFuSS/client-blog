@@ -3,7 +3,7 @@
 import { forwardRef } from 'react';
 import cn from 'classnames';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 interface InputProps {
   variant: 'primary' | 'secondary';

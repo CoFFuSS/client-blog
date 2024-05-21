@@ -7,7 +7,7 @@ import { pickMessages } from '@/utils/pickMessages';
 import { componentsToShow } from '@/constants/componentToShow';
 import Hero from '@/components/Hero';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 interface HomeComponentProps {
   locale: string;

@@ -5,7 +5,7 @@ import Facebook from '@/assets/icons/Facebook.svg';
 import Twitter from '@/assets/icons/Twitter.svg';
 import LinkedIn from '@/assets/icons/LinkedIn.svg';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function SocialWrapper() {
   return (

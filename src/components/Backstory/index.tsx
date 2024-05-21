@@ -6,7 +6,7 @@ import background from '@/assets/images/backstory-background.png';
 import { routes } from '@/constants/routes';
 import Button from '@/components/Button';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function Backstory() {
   const t = useTranslations('home.backstory');

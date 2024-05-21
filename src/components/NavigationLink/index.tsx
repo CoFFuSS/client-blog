@@ -7,7 +7,7 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 import { Link } from '@/navigation';
 import { AppPathname } from '@/config';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function NavigationLink<Pathname extends AppPathname>({
   href,

@@ -8,7 +8,7 @@ import { sendEmailFooter } from '@/utils/sendEmail';
 import Button from '@/components/Button';
 import Input from '@/components/Input';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function FooterForm() {
   const {

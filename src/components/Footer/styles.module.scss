@@ -1,11 +1,10 @@
 .footer {
-  @include respond('tablet') {
-    align-items: center;
-    justify-content: center;
-  }
-
   display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: $s56 $s80;
+
   background-color: $dark-blue;
 }
 

@@ -72,6 +72,17 @@
     "info": "Last Updated on 27th January 2022"
   },
 
+  "contact": {
+    "title": "Let’s Start a Conversation",
+    "subtitle": "Contact us",
+    "form": {
+      "inputs": {
+        "name": "Full Name  ",
+        "email": "Your Email"
+      }
+    }
+  },
+
   "header": {
     "links": {
       "Home": "Home",

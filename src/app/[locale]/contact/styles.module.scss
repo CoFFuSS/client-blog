@@ -1,0 +1,76 @@
+.container {
+  @include respond('tablet') {
+    margin: $s64 auto 0 auto;
+  }
+
+  width: 100%;
+  margin: $s128 auto 0 auto;
+}
+
+.content {
+  @include respond('tablet') {
+    width: 75%;
+  }
+
+  @include respond('phone') {
+    width: 90%;
+  }
+
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+
+  &__text {
+    @include respond('tablet') {
+      margin-bottom: $s32;
+    }
+
+    margin-bottom: $s64;
+  }
+}
+
+.info {
+  @include respond('desktop') {
+    flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction: row;
+  gap: $s48;
+  align-items: flex-start;
+
+  margin: 0 auto;
+  margin-bottom: $s32;
+  padding: $s48;
+
+  color: $white;
+
+  background-color: $violet;
+
+  & > div {
+    flex: 0 1 50%;
+    text-align: left;
+  }
+
+  &__upper {
+    margin-bottom: $s16;
+    padding: $s16 0;
+    font-weight: 400;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  &__bottom {
+    font-weight: 400;
+  }
+
+  &__worktime {
+    display: flex;
+    flex-direction: column;
+    gap: $s8;
+
+    & > span {
+      font-size: $f20;
+      font-weight: 700;
+    }
+  }
+}

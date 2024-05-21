@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { routes } from '@/constants/routes';
 import Button from '@/components/Button';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 interface FeaturedPostProps {
   author: string;

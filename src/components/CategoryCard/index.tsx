@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { routes } from '@/constants/routes';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 interface CategoryCardProps {
   icon: string;

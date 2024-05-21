@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import Button from '@/components/Button';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 interface ModalProps {
   buttonContent: string;

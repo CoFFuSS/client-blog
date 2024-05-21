@@ -12,7 +12,7 @@ import { routes } from '@/constants/routes';
 import VideoModal from '@/components/VideoModal';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

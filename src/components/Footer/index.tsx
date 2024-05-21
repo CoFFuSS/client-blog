@@ -7,7 +7,7 @@ import { routes } from '@/constants/routes';
 import FooterForm from '@/components/FooterForm';
 import SocialWrapper from '@/components/SocialWrapper';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function Footer() {
   const t = useTranslations('footer');

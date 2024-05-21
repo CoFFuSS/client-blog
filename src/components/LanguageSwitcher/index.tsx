@@ -6,7 +6,7 @@ import { ChangeEvent, useTransition } from 'react';
 import { usePathname, useRouter } from '@/navigation';
 import { locales } from '@/config';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function LanguageSwitcher() {
   const router = useRouter();

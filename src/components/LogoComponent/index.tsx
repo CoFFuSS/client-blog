@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { routes } from '@/constants/routes';
 import { featuredLogos } from '@/constants/featuresLogos';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 export default function LogoComponent() {
   const t = useTranslations('home.logo');

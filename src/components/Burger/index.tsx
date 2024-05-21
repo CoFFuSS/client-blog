@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { MouseEventHandler } from 'react';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 interface BurgerProps {
   isOpen: boolean;

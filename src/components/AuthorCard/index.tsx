@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { routes } from '@/constants/routes';
 import SocialWrapper from '@/components/SocialWrapper';
 
-import styles from './styled.module.scss';
+import styles from './styles.module.scss';
 
 interface AuthorCardProps {
   avatar: StaticImageData;
