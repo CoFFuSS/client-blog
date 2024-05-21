@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ParamsLocale } from '@/types/common';
 import ContactForm from '@/components/ContactForm';
 import { pickMessages } from '@/utils/pickMessages';
+import { Map } from '@/components/Map';
 
 import styles from './styles.module.scss';
 
@@ -48,6 +49,7 @@ export default function Contact({ params: { locale } }: ParamsLocale) {
           <ContactForm />
         </NextIntlClientProvider>
       </div>
+      <Map />
     </main>
   );
 }
