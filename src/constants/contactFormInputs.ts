@@ -9,14 +9,14 @@ interface ContactFormFields {
 export const contactFormInputs: ContactFormFields[] = [
   {
     name: 'fullName',
-    variant: 'primary',
+    variant: 'secondary',
     placeholder: 'inputs.name',
     dataCy: 'full-name-input',
     type: 'text',
   },
   {
     name: 'email',
-    variant: 'primary',
+    variant: 'secondary',
     placeholder: 'inputs.email',
     dataCy: 'email-input',
     type: 'email',

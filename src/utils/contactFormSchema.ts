@@ -8,3 +8,10 @@ export const contactFormSchema = z.object({
 });
 
 export type FormValues = z.infer<typeof contactFormSchema>;
+
+export interface ContactFormFields {
+  fullName: string;
+  email: string;
+  officeLocation: string;
+  message: string;
+}

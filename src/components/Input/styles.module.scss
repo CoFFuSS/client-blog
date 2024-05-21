@@ -1,11 +1,9 @@
-.container {
-  display: flex;
-  border: 1px solid;
-}
-
 .input {
   max-height: $s56;
   padding: $s16 $s24;
+
+  color: $dark-blue;
+
   background-color: inherit;
   border: 1px solid;
 }

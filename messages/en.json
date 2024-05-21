@@ -78,8 +78,10 @@
     "form": {
       "inputs": {
         "name": "Full Name  ",
-        "email": "Your Email"
-      }
+        "email": "Your Email",
+        "message": "Message"
+      },
+      "button": "Send Message"
     }
   },
 
