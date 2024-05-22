@@ -116,6 +116,12 @@
     }
   },
 
+  "author": {
+    "title": "Hey there, I'm {name} and welcome to my blog",
+    "noAuthor": "No author by id",
+    "postTitle": "My Posts"
+  },
+
   "header": {
     "links": {
       "Home": "Home",

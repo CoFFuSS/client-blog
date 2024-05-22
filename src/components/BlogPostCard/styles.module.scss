@@ -1,0 +1,35 @@
+.card {
+  @include respond('desktop') {
+    flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction: row;
+  gap: $s24;
+
+  &__image {
+    @include respond('desktop') {
+      max-width: 50%;
+    }
+
+    @include respond('tablet') {
+      max-width: 100%;
+    }
+
+    @include respond('phone') {
+      height: 200px;
+    }
+
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: $s20;
+    justify-content: center;
+
+    max-height: 80%;
+  }
+}
