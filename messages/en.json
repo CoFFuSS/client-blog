@@ -40,7 +40,8 @@
 
     "backstory": {
       "subtitle": "Why we started",
-      "title": "It started out as a simple idea and evolved into our passion"
+      "title": "It started out as a simple idea and evolved into our passion",
+      "button": "Discover More"
     },
 
     "authors": {
@@ -82,6 +83,36 @@
         "message": "Message"
       },
       "button": "Send Message"
+    }
+  },
+
+  "about": {
+    "subtitle": "ABOUT US",
+    "title": "We are a team of content writers who share their learnings",
+    "statistic": {
+      "published": "Published",
+      "views": "Views",
+      "activeUsers": "Active users"
+    },
+    "mission": {
+      "title": "Creating valuable content for creatives all around the world",
+      "subtitle": "Our mision"
+    },
+    "vision": {
+      "title": "A platform that empowers individuals to improve",
+      "subtitle": "Our Vision"
+    },
+
+    "team": {
+      "title": "Our team of creatives"
+    },
+
+    "why": {
+      "title": "Why we started this Blogs"
+    },
+
+    "authors": {
+      "title": "List of Authors"
     }
   },
 

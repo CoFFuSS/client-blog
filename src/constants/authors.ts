@@ -32,4 +32,32 @@ export const authors = [
     company: 'Gegel',
     id: 4,
   },
+  {
+    avatar: author1,
+    name: 'Floyd Miles',
+    role: 'tarkovchanin',
+    company: 'bsg',
+    id: 5,
+  },
+  {
+    avatar: author2,
+    name: 'Dianne Russell',
+    role: 'blogerka',
+    company: 'onlyFriends',
+    id: 6,
+  },
+  {
+    avatar: author3,
+    name: 'Jenny Wilson',
+    role: 'pethuhon dev',
+    company: 'Bibovise',
+    id: 7,
+  },
+  {
+    avatar: author4,
+    name: 'Leslie Alexander',
+    role: 'PM',
+    company: 'Gegel',
+    id: 8,
+  },
 ];
