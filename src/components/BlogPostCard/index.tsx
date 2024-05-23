@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { BlogPostFields } from '@/constants/blogPosts';
 import { routes } from '@/constants/routes';
+import { BlogPostFields } from '@/constants/blogPosts';
 
 import styles from './styles.module.scss';
 
