@@ -7,7 +7,7 @@ import ContactForm from '@/components/ContactForm';
 import { pickMessages } from '@/utils/pickMessages';
 import { Map } from '@/components/Map';
 
-import styles from './styles.module.scss';
+import styles from './page.module.scss';
 
 export default function Contact({ params: { locale } }: ParamsLocale) {
   unstable_setRequestLocale(locale);

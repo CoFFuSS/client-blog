@@ -123,6 +123,16 @@
     "postTitle": "My Posts"
   },
 
+  "posts": {
+    "title": "All posts",
+    "prev": "Prev",
+    "next": "Next",
+    "noPosts": "There is no post that you are searching for",
+    "back": "Go back to posts",
+    "backBtn": "Back",
+    "readNext": "What to read next"
+  },
+
   "header": {
     "links": {
       "Home": "Home",

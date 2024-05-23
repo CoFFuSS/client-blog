@@ -6,7 +6,7 @@ import { authors } from '@/constants/authors';
 import { BlogPostFields, blogPosts } from '@/constants/blogPosts';
 import BlogPostCard from '@/components/BlogPostCard';
 
-import styles from './styles.module.scss';
+import styles from './page.module.scss';
 
 interface AuthorProps {
   params: { id: string };

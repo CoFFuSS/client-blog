@@ -1,35 +1,72 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import cn from 'classnames';
 
-import { BlogPostFields, blogPosts } from '@/constants/blogPosts';
+import { blogPosts, postsPerPage } from '@/constants/blogPosts';
+
+import styles from './styles.module.scss';
 
 import BlogPostCard from '../BlogPostCard';
 
 export default function BlogPosts() {
-  const t = useTranslations('blogPosts');
+  const t = useTranslations('posts');
+  const [currentPage, setCurrentPage] = useState(0);
+  const [animation, setAnimation] = useState(styles.animate);
+
+  const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+
+  const start = currentPage * postsPerPage;
+  const end = start + postsPerPage;
+  const pagedPosts = blogPosts.slice(start, end);
+
+  const hadnelPrevPage = () => {
+    setCurrentPage((page) => page - 1);
+    setAnimation(styles.animate__prev);
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage((page) => page + 1);
+    setAnimation(styles.animate__next);
+  };
 
   return (
-    <section>
-      <section>
-        <h1>{t('posts.title')}</h1>
-        <div>
-          {blogPosts.slice(0, 6).map((post: BlogPostFields) => (
-            <BlogPostCard
-              key={post.id}
-              {...post}
-            />
-          ))}
-        </div>
-        <div>
-          <button type='button'>
+    <section className={styles.posts}>
+      <h1>{t('title')}</h1>
+      <div
+        className={cn(styles.posts__list, animation)}
+        key={currentPage}
+      >
+        {pagedPosts.map((post) => (
+          <BlogPostCard
+            key={post.id}
+            {...post}
+          />
+        ))}
+      </div>
+      <div className={styles.buttons}>
+        <button
+          className={styles.button}
+          type='button'
+          disabled={currentPage === 0}
+          onClick={hadnelPrevPage}
+        >
+          <h4>
             {'<'} {t('prev')}
-          </button>
-          <button type='button'>
-            {'>'} {t('next')}
-          </button>
-        </div>
-      </section>
+          </h4>
+        </button>
+        <button
+          className={styles.button}
+          type='button'
+          disabled={currentPage === totalPages - 1}
+          onClick={handleNextPage}
+        >
+          <h4>
+            {t('next')} {'>'}
+          </h4>
+        </button>
+      </div>
     </section>
   );
 }

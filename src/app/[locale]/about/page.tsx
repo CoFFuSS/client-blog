@@ -12,7 +12,7 @@ import AuthorCard from '@/components/AuthorCard';
 import { pickMessages } from '@/utils/pickMessages';
 import Join from '@/components/Join';
 
-import styles from './styles.module.scss';
+import styles from './page.module.scss';
 
 export default function AboutPage({ params: { locale } }: ParamsLocale) {
   const t = useTranslations('about');

@@ -7,6 +7,9 @@ import FeaturedBlogPost from '@/components/FeaturedBlogPost';
 import { pickMessages } from '@/utils/pickMessages';
 import ChooseCategory from '@/components/ChooseCategory';
 import Join from '@/components/Join';
+import BlogPosts from '@/components/BlogPosts';
+
+import styles from './page.module.scss';
 
 export default function Blog({ params: { locale } }: ParamsLocale) {
   unstable_setRequestLocale(locale);
@@ -15,7 +18,7 @@ export default function Blog({ params: { locale } }: ParamsLocale) {
   const { title, author, date, text, id } = blogPosts[0];
 
   return (
-    <main>
+    <main className={styles.container}>
       <NextIntlClientProvider messages={pickMessages(messages, 'home')}>
         <FeaturedBlogPost
           title={title}
@@ -24,6 +27,9 @@ export default function Blog({ params: { locale } }: ParamsLocale) {
           text={text}
           id={id}
         />
+      </NextIntlClientProvider>
+      <NextIntlClientProvider messages={pickMessages(messages, 'posts')}>
+        <BlogPosts />
       </NextIntlClientProvider>
       <NextIntlClientProvider messages={pickMessages(messages, 'home')}>
         <ChooseCategory />
