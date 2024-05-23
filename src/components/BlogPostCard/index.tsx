@@ -17,7 +17,7 @@ export default function BlogPostCard({ image, category, title, text, id }: BlogP
         />
       </div>
       <div className={styles.card__info}>
-        <h5>{category}</h5>
+        <h5 className={styles.card__category}>{category}</h5>
         <Link href={`${routes.blog}/${id}`}>
           <h2>{title}</h2>
         </Link>

@@ -24,6 +24,10 @@
     object-fit: cover;
   }
 
+  &__category {
+    color: $violet;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
