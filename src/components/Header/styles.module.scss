@@ -12,7 +12,7 @@
   background-color: $dark-blue;
 
   &__links {
-    @include respond('tablet') {
+    @include respond('desktop') {
       position: absolute;
       z-index: $z10;
       top: 0;

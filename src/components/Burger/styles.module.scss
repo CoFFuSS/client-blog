@@ -1,5 +1,5 @@
 .burger {
-  @include respond('tabletLg') {
+  @include respond('desktop') {
     cursor: pointer;
 
     display: block;

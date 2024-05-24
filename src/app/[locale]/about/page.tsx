@@ -14,10 +14,10 @@ import Join from '@/components/Join';
 
 import styles from './page.module.scss';
 
-export default function AboutPage({ params: { locale } }: ParamsLocale) {
+export default function About({ params: { locale } }: ParamsLocale) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations('about');
   const messages = useMessages();
-  unstable_setRequestLocale(locale);
 
   return (
     <main className={styles.container}>
