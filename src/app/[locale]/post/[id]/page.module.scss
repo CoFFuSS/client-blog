@@ -1,3 +1,84 @@
 .container {
+  @include respond('desktop') {
+    padding: $s24;
+  }
+
   display: flex;
+  flex-direction: column;
+  gap: $s128;
+  padding: $s128;
+}
+
+.section {
+  @include respond('desktop') {
+    gap: $s24;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: $s64;
+}
+
+.content {
+  @include respond('destop') {
+    max-width: 70%;
+  }
+
+  @include respond('tabletLg') {
+    max-width: 80%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: $s24;
+
+  max-width: 50%;
+  margin: 0 auto;
+
+  &__author {
+    display: flex;
+    flex-direction: row;
+    gap: $s16;
+    align-items: center;
+  }
+
+  &__category {
+    display: flex;
+    flex-direction: row;
+    gap: $s16;
+  }
+
+  &__list {
+    margin-bottom: $s32;
+    list-style: circle;
+
+    & > li {
+      font-size: $f20;
+      font-weight: 700;
+    }
+  }
+}
+
+.image {
+  @include respond('desktop') {
+    width: 100%;
+  }
+
+  @include respond('tablet') {
+    height: 500px;
+  }
+
+  @include respond('phone') {
+    height: 400px;
+  }
+
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

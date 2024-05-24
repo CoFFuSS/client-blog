@@ -47,10 +47,10 @@ export default function Post({ params: { id } }: PostProps) {
   const profileImage = authors.find((currAuthor) => currAuthor.name === author)?.avatar;
 
   return (
-    <main>
-      <section>
-        <div>
-          <div>
+    <main className={styles.container}>
+      <section className={styles.section}>
+        <div className={styles.content}>
+          <div className={styles.content__author}>
             <Image
               src={profileImage!}
               alt={author}
@@ -61,19 +61,30 @@ export default function Post({ params: { id } }: PostProps) {
               <p>{date}</p>
             </div>
           </div>
+          <h1>{title}</h1>
+          <div className={styles.content__category}>
+            <Image
+              src={icon}
+              alt='post-icon'
+            />
+            <span>{category}</span>
+          </div>
         </div>
-        <div>
+        <div className={styles.image__container}>
           <Image
+            className={styles.image}
             src={image}
             alt={title}
           />
         </div>
-        <div>
+        <div className={styles.content}>
           <h2>{contentTitle}</h2>
+          <ul className={styles.content__list}>
+            {points.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
           <p>{contentText}</p>
-        </div>
-        <div>
-          {points} {category} {icon}
         </div>
       </section>
       <NextIntlClientProvider messages={pickMessages(messages, 'posts')}>
