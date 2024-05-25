@@ -1,7 +1,6 @@
 'use client';
 
 import { Dispatch, SetStateAction } from 'react';
-import { useTranslations } from 'next-intl';
 import cn from 'classnames';
 
 import { BlogPostFields } from '@/constants/blogPosts';
@@ -16,7 +15,6 @@ interface TagsProps {
 }
 
 export default function Tags({ posts, setPosts }: TagsProps) {
-  const t = useTranslations('category');
   const [setSelectedTags, selectedTags, initialPosts] = useFilterByTag(posts, setPosts);
 
   const handleSelectTag = (tag: string) => () => {
@@ -59,7 +57,7 @@ export default function Tags({ posts, setPosts }: TagsProps) {
         type='button'
         onClick={handleClearTags}
       >
-        {t('buttonClear')}
+        Clear tags
       </button>
     </div>
   );

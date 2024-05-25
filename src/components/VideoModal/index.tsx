@@ -28,6 +28,7 @@ export default function VideoModal({ buttonContent }: ModalProps) {
     <>
       <Button
         dataCy='modal-button'
+        data-testid='modal-button'
         variant='primary'
         onClick={handleOpenModal}
       >
@@ -39,6 +40,7 @@ export default function VideoModal({ buttonContent }: ModalProps) {
             <div className={styles.content}>
               <button
                 data-cy='close-modal-button'
+                data-testid='close-modal-button'
                 className={styles.close}
                 onClick={handleCloseModal}
                 type='button'
