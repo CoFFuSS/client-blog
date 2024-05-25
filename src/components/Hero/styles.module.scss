@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  height: auto;
+  padding: $s128 $s80;
+
+  color: $white;
+
+  background: radial-gradient(80.99% 71.93% at 74.58% 0%, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 60%) 100%),
+    url('../../assets/images/heroBg.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  h6 {
+    font-weight: 400;
+  }
+}
+
+.title {
+  max-width: 800;
+  margin: $s24 0;
+  font-weight: 700;
+}
+
+.name {
+  color: $yellow;
+}
+
+.text {
+  max-width: 600;
+  margin-top: $s16;
+  margin-bottom: $s48;
+  font-weight: 400;
+}

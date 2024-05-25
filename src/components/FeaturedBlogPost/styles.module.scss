@@ -1,0 +1,55 @@
+.post {
+  @include respond('desktop') {
+    flex-direction: column;
+    gap: $s32;
+    padding: $s24;
+  }
+
+  display: flex;
+  flex-direction: row;
+  gap: $s128;
+
+  padding: $s80;
+
+  background-color: $light-gray;
+
+  &__info {
+    @include respond('desktop') {
+      max-width: 100%;
+    }
+
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+  }
+
+  &__title {
+    padding: $s16 0;
+  }
+
+  &__text {
+    padding-top: $s16;
+    padding-bottom: $s32;
+  }
+
+  &__name {
+    color: $violet;
+  }
+}
+
+.image {
+  @include respond('desktop') {
+    width: 100%;
+  }
+
+  @include respond('tablet') {
+    height: 400px;
+  }
+
+  @include respond('phone') {
+    height: 300px;
+  }
+
+  width: 80%;
+  object-fit: cover;
+}

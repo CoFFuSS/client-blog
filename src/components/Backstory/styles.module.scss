@@ -1,0 +1,79 @@
+.container {
+  @include respond('desktop') {
+    padding: 0 $s16;
+  }
+
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  @include respond('desktop') {
+    width: 100%;
+  }
+
+  @include respond('tablet') {
+    height: 500px;
+  }
+
+  @include respond('phone') {
+    height: 400px;
+  }
+
+  width: 80%;
+  object-fit: cover;
+}
+
+.content {
+  @include respond('desktop') {
+    right: $s48;
+    bottom: -$s32;
+    width: 80%;
+    padding: $s32;
+  }
+
+  @include respond('phone') {
+    right: 50%;
+    bottom: -$s80;
+    transform: translateX(50%);
+    width: 85%;
+  }
+
+  position: absolute;
+  z-index: $z5;
+  right: 0;
+  bottom: 0;
+
+  width: 70%;
+  padding: $s80;
+
+  background-color: $white;
+}
+
+.title {
+  @include respond('tablet') {
+    margin-bottom: $s8;
+  }
+
+  margin-bottom: $s16;
+}
+
+.subtitle {
+  @include respond('tablet') {
+    margin-bottom: $s16;
+    letter-spacing: 1.5px;
+  }
+
+  margin-bottom: $s24;
+  color: $dark-blue;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.text {
+  @include respond('tablet') {
+    margin-bottom: $s16;
+  }
+
+  margin-bottom: $s32;
+}

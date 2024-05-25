@@ -1,0 +1,269 @@
+.container {
+  @include respond('desktop') {
+    gap: $s24;
+    padding: $s24;
+  }
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: $s128;
+
+  padding: $s80;
+}
+
+.about {
+  @include respond('desktop') {
+    flex-direction: column;
+    gap: $s24;
+  }
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: $s32;
+
+  &__upper {
+    @include respond('tablet') {
+      flex-direction: column;
+      margin-top: $s48;
+    }
+
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $s80;
+  }
+
+  &__main {
+    @include respond('desktop') {
+      top: $s80;
+      left: 108px;
+    }
+
+    @include respond('tablet') {
+      position: static;
+      width: 100%;
+      padding: $s16 0;
+    }
+
+    position: absolute;
+    z-index: $z5;
+    left: $s128;
+
+    width: 48%;
+    padding: $s48;
+
+    background-color: $white;
+  }
+
+  &__bottom {
+    @include respond('tablet') {
+      width: 90%;
+      padding: $s32;
+    }
+
+    @include respond('phone') {
+      width: 100%;
+      padding: $s16 0;
+    }
+
+    display: flex;
+    justify-self: flex-end;
+    width: 45%;
+    padding: $s64;
+  }
+
+  &__stats {
+    @include respond('tablet') {
+      padding: $s32 $s16;
+    }
+
+    @include respond('phone') {
+      left: 0;
+    }
+
+    position: absolute;
+    bottom: 24px;
+    left: 50px;
+
+    padding: $s48 $s32;
+
+    background-color: $yellow;
+
+    & > ul {
+      @include respond('tablet') {
+        gap: $s32;
+      }
+
+      @include respond('phone') {
+        gap: $s8;
+      }
+
+      display: flex;
+      gap: $s64;
+    }
+  }
+
+  &__bg {
+    position: relative;
+    object-fit: cover;
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+      z-index: 5;
+      bottom: 0;
+
+      height: 24px;
+    }
+
+    &::before {
+      left: 50px;
+      width: 36%;
+      background: $violet;
+    }
+
+    &::after {
+      right: 50px;
+      width: 64%;
+      background: $yellow;
+    }
+
+    & > img {
+      width: 100%;
+    }
+  }
+}
+
+.mission {
+  @include respond('desktop') {
+    flex-direction: column;
+    padding: $s32;
+  }
+
+  display: flex;
+  flex-direction: row;
+  gap: $s32;
+
+  padding: $s128;
+
+  background-color: $light-gray;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: $s16;
+  }
+}
+
+.team,
+.why {
+  @include respond('desktop') {
+    flex-direction: column;
+    gap: $s32;
+    margin-bottom: $s32;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $s128;
+
+  &__image {
+    position: relative;
+    flex: 0 0 45%;
+
+    & > img {
+      @include respond('tablet') {
+        height: 400px;
+      }
+
+      @include respond('phone') {
+        height: 230px;
+      }
+
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    @include respond('tablet') {
+      padding: 0 $s16;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: $s16;
+    padding: 0 $s80;
+
+    & > p {
+      color: $dark-gray;
+      opacity: $opacity70;
+    }
+  }
+}
+
+.why {
+  @include respond('desktop') {
+    flex-direction: column;
+  }
+
+  flex-direction: row-reverse;
+}
+
+.team {
+  &__image {
+    &::after {
+      @include respond('tablet') {
+        left: -25px;
+        width: 50px;
+        height: 58px;
+      }
+
+      content: '';
+
+      position: absolute;
+      z-index: $z5;
+      top: 30%;
+      left: -50px;
+
+      display: block;
+
+      width: 100px;
+      height: 116px;
+
+      background-color: $yellow;
+      border-top-left-radius: 50%;
+    }
+  }
+}
+
+.authors {
+  @include respond('desktop') {
+    gap: $s24;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: $s48;
+  align-items: center;
+
+  &__list {
+    @include respond('tablet') {
+      grid-template-columns: 1fr;
+    }
+
+    @include respond('desktop') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-direction: row;
+    gap: $s32;
+  }
+}

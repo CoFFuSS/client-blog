@@ -1,0 +1,21 @@
+.container {
+  height: 100%;
+  padding: $s32;
+  border: 1px solid $light-gray;
+
+  img {
+    padding-bottom: $s32;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: $s16;
+  padding-bottom: $s48;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}

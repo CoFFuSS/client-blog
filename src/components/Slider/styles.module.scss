@@ -1,0 +1,70 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &__items {
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__item {
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.next {
+  transform: rotate(-180deg);
+}
+
+.prev,
+.next {
+  cursor: pointer;
+}
+
+.arrows {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  gap: $s8;
+}
+
+.text {
+  @include respond('desktopLg') {
+    font-size: $f20;
+    line-height: 24px;
+  }
+
+  @include respond('tablet') {
+    margin-bottom: $s48;
+  }
+
+  @include respond('phone') {
+    margin-bottom: $s24;
+  }
+
+  margin-bottom: $s96;
+  font-size: $f24;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.author {
+  &__row {
+    display: flex;
+    gap: $s16;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: $f20;
+    font-weight: 700;
+  }
+}

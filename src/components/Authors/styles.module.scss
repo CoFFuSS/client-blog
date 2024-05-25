@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $s48;
+  align-items: center;
+}
+
+.content {
+  @include respond('tablet') {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond('desktop') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-direction: row;
+  gap: $s32;
+}

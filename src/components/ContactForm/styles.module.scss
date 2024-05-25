@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $s16;
+
+  width: 100%;
+  padding-bottom: $s80;
+}
+
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: $s24;
+
+  color: $dark-blue;
+
+  border: 1px solid $dark-gray;
+}
+
+.option {
+  padding: $s8 $s24;
+  color: $dark-blue;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+
+  &:checked {
+    background-color: $light-gray;
+  }
+}
+
+.textarea {
+  resize: vertical;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: $s24;
+
+  color: $dark-blue;
+
+  border: 1px solid $dark-gray;
+}

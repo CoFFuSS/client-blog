@@ -1,0 +1,10 @@
+.map {
+  @include respond('tablet') {
+    height: 300px;
+  }
+
+  cursor: grab;
+  width: 100%;
+  height: 500px;
+  margin-top: $s80;
+}
