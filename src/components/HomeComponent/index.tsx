@@ -1,11 +1,12 @@
 'use client';
 
 import { AbstractIntlMessages, NextIntlClientProvider } from 'next-intl';
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { Fragment } from 'react';
 
 import { pickMessages } from '@/utils/pickMessages';
 import { componentsToShow } from '@/constants/componentToShow';
 import Hero from '@/components/Hero';
+import { useInfiniteScrolling } from '@/hooks/useInfiniteScrolling';
 
 import styles from './styles.module.scss';
 
@@ -15,31 +16,7 @@ interface HomeComponentProps {
 }
 
 export default function HomeComponent({ locale, messages }: HomeComponentProps) {
-  const [showItems, setShowItems] = useState(1);
-  const observerTarget = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setShowItems((prev) => prev + 1);
-        }
-      },
-      { threshold: 1 },
-    );
-
-    const target = observerTarget.current;
-
-    if (target) {
-      observer.observe(target);
-    }
-
-    return () => {
-      if (target) {
-        observer.unobserve(target);
-      }
-    };
-  }, []);
+  const [showItems, observerTarget] = useInfiniteScrolling();
 
   return (
     <NextIntlClientProvider
