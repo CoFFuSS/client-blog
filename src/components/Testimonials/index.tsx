@@ -11,7 +11,7 @@ export default function Testimonials() {
 
   return (
     <section className={styles.container}>
-      <div>
+      <div className={styles.container__text}>
         <h5>{t('subtitle')}</h5>
         <h2>{t('title')}</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>

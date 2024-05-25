@@ -1,12 +1,39 @@
 .container {
-  @include respond('desktop') {
+  @include respond('tablet') {
     flex-direction: column;
+    padding: $s40 $s64;
+  }
+
+  @include respond('phone') {
+    padding: $s20 $s16;
   }
 
   display: flex;
   flex-direction: row;
   padding: $s80 $s128;
   background-color: $light-yellow;
+
+  &__text {
+    @include respond('tablet') {
+      margin-bottom: $s32;
+      text-align: center;
+    }
+
+    @include respond('phone') {
+      margin-bottom: $s16;
+    }
+  }
+
+  h5,
+  h2,
+  p {
+    @include respond('phone') {
+      margin: $s4 0;
+      font-size: 14px;
+    }
+
+    flex-grow: 1;
+  }
 }
 
 .divider {
