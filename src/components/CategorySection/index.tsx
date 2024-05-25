@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import { BlogPostFields } from '@/constants/blogPosts';
 import { categoryCards } from '@/constants/categoryCard';
@@ -20,7 +20,7 @@ interface CategorySectionProps {
 export default function CategorySection({ posts: currentPosts, name }: CategorySectionProps) {
   const t = useTranslations('category');
   const [posts, setPosts] = useState<BlogPostFields[]>(currentPosts);
-  const categories = categoryCards.map(({ label }) => t(`${label}.title`));
+  const categories = useMemo(() => categoryCards.map(({ label }) => t(`${label}.title`)), [t]);
 
   return (
     <section className={styles.section}>

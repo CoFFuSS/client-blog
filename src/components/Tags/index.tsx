@@ -1,11 +1,12 @@
 'use client';
 
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { useTranslations } from 'next-intl';
 import cn from 'classnames';
 
 import { BlogPostFields } from '@/constants/blogPosts';
 import { tagsList } from '@/constants/tags';
+import { useFilterByTag } from '@/hooks/useFilterByTag';
 
 import styles from './styles.module.scss';
 
@@ -16,20 +17,9 @@ interface TagsProps {
 
 export default function Tags({ posts, setPosts }: TagsProps) {
   const t = useTranslations('category');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const initialPosts = useRef<BlogPostFields[]>(posts);
+  const [setSelectedTags, selectedTags, initialPosts] = useFilterByTag(posts, setPosts);
 
-  useEffect(() => {
-    if (selectedTags.length > 0) {
-      const filteredPosts = initialPosts.current.filter(({ tags: currTags }) =>
-        selectedTags.every((tag) => currTags.includes(tag)),
-      );
-
-      setPosts(filteredPosts);
-    }
-  }, [selectedTags, setPosts]);
-
-  const hadnleSelectTag = (tag: string) => () => {
+  const handleSelectTag = (tag: string) => () => {
     setSelectedTags((prevTags) => {
       if (prevTags.includes(tag.toLowerCase())) {
         return prevTags.filter((prevTag) => prevTag !== tag.toLowerCase());
@@ -55,7 +45,7 @@ export default function Tags({ posts, setPosts }: TagsProps) {
             )}
             key={tag}
             type='button'
-            onClick={hadnleSelectTag(tag)}
+            onClick={handleSelectTag(tag)}
           >
             {tag}
           </button>

@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import cn from 'classnames';
@@ -21,22 +21,25 @@ export default function Search({ placeholder, buttonText, posts }: SearchProps) 
   const [filteredPosts, setFilteredPosts] = useState<BlogPostFields[]>([]);
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
+  const handleSearch = useMemo(
+    () => (e: ChangeEvent<HTMLInputElement>) => {
+      setSearchQuery(e.target.value);
 
-    if (e.target.value) {
-      const lowerCaseQuery = e.target.value.toLowerCase();
-      const newFilteredPosts = posts.filter(({ tags }) =>
-        tags.some((tag) => tag.toLowerCase().includes(lowerCaseQuery)),
-      );
+      if (e.target.value) {
+        const lowerCaseQuery = e.target.value.toLowerCase();
+        const newFilteredPosts = posts.filter(({ tags }) =>
+          tags.some((tag) => tag.toLowerCase().includes(lowerCaseQuery)),
+        );
 
-      setFilteredPosts(newFilteredPosts);
-      setIsVisible(true);
-    } else {
-      setFilteredPosts([]);
-      setIsVisible(false);
-    }
-  };
+        setFilteredPosts(newFilteredPosts);
+        setIsVisible(true);
+      } else {
+        setFilteredPosts([]);
+        setIsVisible(false);
+      }
+    },
+    [posts],
+  );
 
   return (
     <div className={styles.search}>

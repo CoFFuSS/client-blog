@@ -1,5 +1,6 @@
 import { NextIntlClientProvider, useMessages, useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useMemo } from 'react';
 
 import { blogPosts } from '@/constants/blogPosts';
 import { routes } from '@/constants/routes';
@@ -16,7 +17,10 @@ export default function Category({ params: { name } }: CategoryProps) {
   const t = useTranslations('category');
   const messages = useMessages();
 
-  const filteredByCategory = blogPosts.filter(({ category }) => category.toLowerCase() === name);
+  const filteredByCategory = useMemo(
+    () => blogPosts.filter(({ category }) => category.toLowerCase() === name),
+    [name],
+  );
 
   return (
     <main>

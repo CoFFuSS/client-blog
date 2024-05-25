@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
@@ -14,7 +15,16 @@ interface AuthorProps {
 
 export default function Authors({ params: { id } }: AuthorProps) {
   const t = useTranslations('author');
-  const currentAuthor = authors.find(({ id: currentId }) => currentId === +id);
+
+  const currentAuthor = useMemo(() => authors.find(({ id: currentId }) => currentId === +id), [id]);
+
+  const authorPosts: BlogPostFields[] = useMemo(() => {
+    if (currentAuthor) {
+      return blogPosts.filter(({ author }) => author === currentAuthor.name);
+    }
+
+    return [];
+  }, [currentAuthor]);
 
   if (!currentAuthor) {
     return (
@@ -24,22 +34,19 @@ export default function Authors({ params: { id } }: AuthorProps) {
     );
   }
 
-  const { avatar, name } = currentAuthor;
-  const authorPosts: BlogPostFields[] = blogPosts.filter(({ author }) => author === name);
-
-  if (authorPosts && authorPosts.length === 0) {
+  if (authorPosts.length === 0) {
     return <h1>{t('noAuthorPosts')}</h1>;
   }
+
+  const { avatar, name } = currentAuthor;
 
   return (
     <main className={styles.container}>
       <div className={styles.profile}>
-        <div>
-          <Image
-            src={avatar}
-            alt={name}
-          />
-        </div>
+        <Image
+          src={avatar}
+          alt={name}
+        />
         <div className={styles.profile__upper}>
           <h1>{t('title', { name })}</h1>
           <p>

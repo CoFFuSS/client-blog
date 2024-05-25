@@ -11,12 +11,12 @@ export default function Privacy({ params: { locale } }: ParamsLocale) {
 
   return (
     <main>
-      <div className={styles.upper}>
+      <section className={styles.upper}>
         <h1>{t('title')}</h1>
         <p>{t('info')}</p>
-      </div>
+      </section>
 
-      <section className={styles.content}>
+      <article className={styles.content}>
         <h1>Lorem ipsum dolor sit amet</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -72,7 +72,7 @@ export default function Privacy({ params: { locale } }: ParamsLocale) {
           lobortis elementum nibh. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci
           nulla. Neque convallis a cras semper auctor neque vitae tempus quam.
         </p>
-      </section>
+      </article>
     </main>
   );
 }
