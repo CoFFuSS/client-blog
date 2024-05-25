@@ -1,6 +1,6 @@
 'use client';
 
-import { forwardRef } from 'react';
+import { ChangeEvent, forwardRef } from 'react';
 import cn from 'classnames';
 
 import styles from './styles.module.scss';
