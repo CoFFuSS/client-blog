@@ -129,6 +129,31 @@
     "readNext": "Что почитать дальше"
   },
 
+  "category": {
+    "breadcrumbs": {
+      "blog": "Блог",
+      "nextInfo": "> {name}"
+    },
+    "business": {
+      "title": "Бизнес"
+    },
+    "startup": {
+      "title": "Стартап"
+    },
+    "economy": {
+      "title": "Экономика"
+    },
+    "technology": {
+      "title": "Технологии"
+    },
+    "noPosts": "Нет постов в этой категории",
+    "categoriesTitle": "Категории",
+    "tagsTitle": "Все теги",
+    "placeholder": "Искать по тегу...",
+    "buttonText": "Искать",
+    "buttonClear": "Очистить теги"
+  },
+
   "header": {
     "links": {
       "Home": "Главная",

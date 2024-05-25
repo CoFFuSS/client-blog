@@ -15,7 +15,7 @@ export default function ChooseCategory() {
         {categoryCards.map(({ label, icon, text }) => (
           <div key={label}>
             <CategoryCard
-              label={t(`${label}.title`)}
+              label={label}
               icon={icon}
               text={text}
             />

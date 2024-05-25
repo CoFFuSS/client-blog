@@ -133,6 +133,31 @@
     "readNext": "What to read next"
   },
 
+  "category": {
+    "breadcrumbs": {
+      "blog": "Blog",
+      "nextInfo": "> {name}"
+    },
+    "business": {
+      "title": "Business"
+    },
+    "startup": {
+      "title": "Startup"
+    },
+    "economy": {
+      "title": "Economy"
+    },
+    "technology": {
+      "title": "Technology"
+    },
+    "noPosts": "No posts by this category",
+    "categoriesTitle": "Categories",
+    "tagsTitle": "All tags",
+    "placeholder": "Search for tag...",
+    "buttonText": "Search",
+    "buttonClear": "Clear tags"
+  },
+
   "header": {
     "links": {
       "Home": "Home",

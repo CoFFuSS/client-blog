@@ -1,0 +1,70 @@
+.search {
+  position: relative;
+  display: flex;
+  margin-bottom: $s64;
+
+  &__input {
+    padding: $s16 $s24;
+    color: $dark-blue;
+
+    &:focus {
+      outline-color: $yellow;
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+    background-color: $white;
+    border: 1px solid $light-gray;
+
+    transition: all 0.3s ease;
+
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &__item {
+      display: flex;
+      gap: $s16;
+      align-items: center;
+
+      padding: $s16;
+
+      border-bottom: 1px solid $gray;
+
+      transition: all 0.2s linear;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: $light-yellow;
+      }
+
+      & > img {
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      &:hover {
+        color: $violet;
+      }
+    }
+
+    &__tags {
+      font-weight: 700;
+      color: $violet;
+    }
+  }
+}

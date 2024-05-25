@@ -1,0 +1,24 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: $s24;
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    gap: $s16;
+
+    padding: $s24;
+
+    border: 1px solid $light-gray;
+
+    & > img {
+      background-color: $light-gray;
+      border-radius: $s16;
+    }
+  }
+}
+
+.active {
+  background-color: $yellow;
+}

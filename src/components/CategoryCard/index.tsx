@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { routes } from '@/constants/routes';
 
@@ -12,6 +13,8 @@ interface CategoryCardProps {
 }
 
 export default function CategoryCard({ icon, label, text }: CategoryCardProps) {
+  const t = useTranslations('home.category');
+
   return (
     <div className={styles.container}>
       <Link href={`${routes.category}/${label}`}>
@@ -19,7 +22,7 @@ export default function CategoryCard({ icon, label, text }: CategoryCardProps) {
           src={icon}
           alt='title'
         />
-        <h2>{label}</h2>
+        <h2>{t(`${label}.title`)}</h2>
         <p>{text}</p>
       </Link>
     </div>

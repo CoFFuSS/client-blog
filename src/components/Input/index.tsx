@@ -11,10 +11,12 @@ interface InputProps {
   dataCy: string;
   type: string;
   name: string;
+  value?: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ placeholder = '', dataCy, type, name, variant, ...restProps }, ref) => (
+  ({ placeholder = '', dataCy, type, name, variant, value, onChange, ...restProps }, ref) => (
     <>
       <input
         className={cn(styles.input, {
@@ -26,6 +28,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         data-cy={dataCy}
         type={type}
         name={name}
+        value={value}
+        onChange={onChange}
         {...restProps}
       />
     </>
