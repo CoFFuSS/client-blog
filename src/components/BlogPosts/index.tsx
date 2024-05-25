@@ -15,7 +15,6 @@ export default function BlogPosts() {
   const [animation, setAnimation] = useState(styles.animate);
 
   const totalPages = Math.ceil(blogPosts.length / postsPerPage);
-
   const start = currentPage * postsPerPage;
   const end = start + postsPerPage;
   const pagedPosts = blogPosts.slice(start, end);

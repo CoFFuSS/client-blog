@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { memo } from 'react';
 
 import { routes } from '@/constants/routes';
 import blogHeader from '@/assets/images/blogHeader.png';
@@ -18,7 +19,7 @@ interface FeaturedBlogPostProps {
   id: number;
 }
 
-export default function FeaturedBlogPost({ title, author, date, text, id }: FeaturedBlogPostProps) {
+const FeaturedBlogPost = memo(({ title, author, date, text, id }: FeaturedBlogPostProps) => {
   const t = useTranslations('home.hero');
   const router = useRouter();
 
@@ -51,4 +52,6 @@ export default function FeaturedBlogPost({ title, author, date, text, id }: Feat
       </div>
     </section>
   );
-}
+});
+
+export default FeaturedBlogPost;

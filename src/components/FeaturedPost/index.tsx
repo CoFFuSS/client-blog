@@ -2,6 +2,7 @@
 
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
+import { memo } from 'react';
 
 import { routes } from '@/constants/routes';
 import Button from '@/components/Button';
@@ -18,41 +19,37 @@ interface FeaturedPostProps {
   image: StaticImageData;
 }
 
-export default function FeaturedPost({
-  author,
-  content,
-  title,
-  date,
-  buttonText,
-  id,
-  image,
-}: FeaturedPostProps) {
-  const router = useRouter();
+const FeaturedPost = memo(
+  ({ author, content, title, date, buttonText, id, image }: FeaturedPostProps) => {
+    const router = useRouter();
 
-  const redirectOnClick = () => router.push(`${routes.blog}/${id}`);
+    const redirectOnClick = () => router.push(`${routes.blog}/${id}`);
 
-  return (
-    <div className={styles.container}>
-      <Image
-        className={styles.image}
-        src={image}
-        alt='feature-post'
-      />
-      <div className={styles.text}>
-        <h6>
-          By <span>{author}</span> | {date}
-        </h6>
-        <h2>{title}</h2>
-        <h5>{content}</h5>
+    return (
+      <div className={styles.container}>
+        <Image
+          className={styles.image}
+          src={image}
+          alt='feature-post'
+        />
+        <div className={styles.text}>
+          <h6>
+            By <span>{author}</span> | {date}
+          </h6>
+          <h2>{title}</h2>
+          <h5>{content}</h5>
+        </div>
+
+        <Button
+          dataCy='feature-post-button'
+          variant='primary'
+          onClick={redirectOnClick}
+        >
+          {buttonText} <span>{'>'}</span>
+        </Button>
       </div>
+    );
+  },
+);
 
-      <Button
-        dataCy='feature-post-button'
-        variant='primary'
-        onClick={redirectOnClick}
-      >
-        {buttonText} <span>{'>'}</span>
-      </Button>
-    </div>
-  );
-}
+export default FeaturedPost;
