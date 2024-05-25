@@ -8,10 +8,9 @@ import { categoryCards } from '@/constants/categoryCard';
 import Categories from '@/components/Categories';
 import Tags from '@/components/Tags';
 import Search from '@/components/Search';
+import BlogPostCard from '@/components/BlogPostCard';
 
 import styles from './styles.module.scss';
-
-import BlogPostCard from '../BlogPostCard';
 
 interface CategorySectionProps {
   posts: BlogPostFields[];

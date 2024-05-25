@@ -5,10 +5,9 @@ import { useState } from 'react';
 import cn from 'classnames';
 
 import { blogPosts, postsPerPage } from '@/constants/blogPosts';
+import BlogPostCard from '@/components/BlogPostCard';
 
 import styles from './styles.module.scss';
-
-import BlogPostCard from '../BlogPostCard';
 
 export default function BlogPosts() {
   const t = useTranslations('posts');
@@ -21,7 +20,7 @@ export default function BlogPosts() {
   const end = start + postsPerPage;
   const pagedPosts = blogPosts.slice(start, end);
 
-  const hadnelPrevPage = () => {
+  const handlePrevPage = () => {
     setCurrentPage((page) => page - 1);
     setAnimation(styles.animate__prev);
   };
@@ -50,7 +49,7 @@ export default function BlogPosts() {
           className={styles.button}
           type='button'
           disabled={currentPage === 0}
-          onClick={hadnelPrevPage}
+          onClick={handlePrevPage}
         >
           <h4>
             {'<'} {t('prev')}

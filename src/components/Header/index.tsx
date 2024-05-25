@@ -18,7 +18,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('header');
 
-  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const handleToggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
     <header className={styles.header}>
@@ -32,7 +32,7 @@ export default function Header() {
         <div className={styles.menu}>
           <Burger
             isOpen={isOpen}
-            toggleMenu={toggleMenu}
+            toggleMenu={handleToggleMenu}
           />
           <ul className={cn(styles.header__links, isOpen ? styles.open : '')}>
             {navLinks.map(({ name, href }) => (
