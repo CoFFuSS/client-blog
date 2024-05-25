@@ -46,7 +46,7 @@ export default function VideoModal({ buttonContent }: ModalProps) {
                 data-cy='modal'
                 data-testid='modal'
                 className={styles.iframe}
-                src='http://www.youtube.com/embed/f4l837aCudU?si=764cfpwa2KtlNxjB?autoplay=1'
+                src='https://www.youtube.com/embed/f4l837aCudU?si=764cfpwa2KtlNxjB?autoplay=1'
                 title='YouTube video player'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
