@@ -37,7 +37,12 @@ export default function Header() {
           <ul className={cn(styles.header__links, isOpen ? styles.open : '')}>
             {navLinks.map(({ name, href }) => (
               <li key={name}>
-                <NavigationLink href={href}>{t(`links.${name}`)}</NavigationLink>
+                <NavigationLink
+                  href={href}
+                  data-cy={name}
+                >
+                  {t(`links.${name}`)}
+                </NavigationLink>
               </li>
             ))}
             <VideoModal buttonContent={t('button')} />

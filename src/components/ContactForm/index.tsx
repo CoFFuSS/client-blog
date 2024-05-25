@@ -27,6 +27,7 @@ export default function ContactForm() {
     reset,
   } = useForm<FormValues>({
     resolver: zodResolver(contactFormSchema),
+    mode: 'onChange',
   });
 
   const onSubmit: SubmitHandler<FormValues> = async ({
@@ -69,7 +70,7 @@ export default function ContactForm() {
             type={type}
             {...register(name)}
           />
-          {errors[name] && <p>{errors[name]?.message}</p>}
+          {errors[name] && <h4 data-cy='error'>{errors[name]?.message}</h4>}
         </Fragment>
       ))}
 
@@ -98,7 +99,7 @@ export default function ContactForm() {
           id='message'
           {...register('message')}
         />
-        {errors.message && <p>{errors.message.message}</p>}
+        {errors.message && <h4 data-cy='textarea-error'>{errors.message.message}</h4>}
       </div>
       <Button
         variant='primary'

@@ -56,6 +56,7 @@ export default function Search({ placeholder, buttonText, posts }: SearchProps) 
       <div className={cn(styles.dropdown, isVisible ? styles.visible : '')}>
         {filteredPosts.map(({ id, image, title, tags }) => (
           <div
+            data-cy='post-item'
             key={id}
             className={styles.dropdown__item}
           >

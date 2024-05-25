@@ -38,6 +38,7 @@ export default function VideoModal({ buttonContent }: ModalProps) {
           <div className={styles.overlay}>
             <div className={styles.content}>
               <button
+                data-cy='close-modal-button'
                 className={styles.close}
                 onClick={handleCloseModal}
                 type='button'

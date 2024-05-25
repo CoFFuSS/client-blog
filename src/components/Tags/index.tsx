@@ -46,6 +46,7 @@ export default function Tags({ posts, setPosts }: TagsProps) {
             key={tag}
             type='button'
             onClick={handleSelectTag(tag)}
+            data-cy={tag}
           >
             {tag}
           </button>
@@ -53,6 +54,7 @@ export default function Tags({ posts, setPosts }: TagsProps) {
       </div>
 
       <button
+        data-cy='clear-tags-button'
         className={cn(styles.button, styles.clear)}
         type='button'
         onClick={handleClearTags}
