@@ -2,6 +2,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider, useMessages, useTranslations } from 'next-intl';
 import Link from 'next/link';
 
+import 'mapbox-gl/dist/mapbox-gl.css';
 import { ParamsLocale } from '@/types/common';
 import ContactForm from '@/components/ContactForm';
 import { pickMessages } from '@/utils/pickMessages';
