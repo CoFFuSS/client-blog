@@ -43,10 +43,12 @@ export default function VideoModal({ buttonContent }: ModalProps) {
                 type='button'
               />
               <iframe
+                data-cy='modal'
+                data-testid='modal'
                 className={styles.iframe}
                 src='http://www.youtube.com/embed/f4l837aCudU?si=764cfpwa2KtlNxjB?autoplay=1'
-                title='Youtube video player'
-                allow='autoplay; gyroscope'
+                title='YouTube video player'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
               />
             </div>
