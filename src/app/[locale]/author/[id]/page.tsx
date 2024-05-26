@@ -48,7 +48,7 @@ export default function Authors({ params: { id } }: AuthorProps) {
           alt={name}
         />
         <div className={styles.profile__upper}>
-          <h1>{translation('title', { name })}</h1>
+          <h1>{translation('title')}</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque

@@ -117,7 +117,7 @@ export default function About({ params: { locale } }: ParamsLocale) {
         </div>
       </div>
       <div className={styles.authors}>
-        <h2>{translation('authors.title')}</h2>
+        <h2>{translation('author.title')}</h2>
         <div className={styles.authors__list}>
           {authors.map(({ avatar, name, role, company, id }) => (
             <AuthorCard

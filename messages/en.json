@@ -112,13 +112,15 @@
       "title": "Why we started this Blogs"
     },
 
-    "authors": {
-      "title": "List of Authors"
+    "author": {
+      "title": "Hey there, welcome to my blog",
+      "noAuthor": "No author by id",
+      "postTitle": "My Posts"
     }
   },
 
   "author": {
-    "title": "Hey there, I'm {name} and welcome to my blog",
+    "title": "Hey there, welcome to my blog",
     "noAuthor": "No author by id",
     "postTitle": "My Posts"
   },
