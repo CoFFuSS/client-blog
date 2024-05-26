@@ -19,7 +19,10 @@ export default function Blog({ params: { locale } }: ParamsLocale) {
 
   return (
     <main className={styles.container}>
-      <NextIntlClientProvider messages={pickMessages(messages, 'home')}>
+      <NextIntlClientProvider
+        messages={pickMessages(messages, 'home')}
+        locale={locale}
+      >
         <FeaturedBlogPost
           title={title}
           author={author}
@@ -28,10 +31,16 @@ export default function Blog({ params: { locale } }: ParamsLocale) {
           id={id}
         />
       </NextIntlClientProvider>
-      <NextIntlClientProvider messages={pickMessages(messages, 'posts')}>
+      <NextIntlClientProvider
+        messages={pickMessages(messages, 'posts')}
+        locale={locale}
+      >
         <BlogPosts />
       </NextIntlClientProvider>
-      <NextIntlClientProvider messages={pickMessages(messages, 'home')}>
+      <NextIntlClientProvider
+        messages={pickMessages(messages, 'home')}
+        locale={locale}
+      >
         <ChooseCategory />
         <Join />
       </NextIntlClientProvider>
