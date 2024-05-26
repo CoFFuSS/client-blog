@@ -1,12 +1,8 @@
-import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-
-import { ParamsLocale } from '@/types/common';
 
 import styles from './page.module.scss';
 
-export default function Privacy({ params: { locale } }: ParamsLocale) {
-  unstable_setRequestLocale(locale);
+export default function Privacy() {
   const translation = useTranslations('privacy');
 
   return (

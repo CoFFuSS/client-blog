@@ -1,8 +1,6 @@
-import { unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { NextIntlClientProvider, useMessages, useTranslations } from 'next-intl';
 
-import { ParamsLocale } from '@/types/common';
 import aboutBg from '@/assets/images/aboutBg.png';
 import { statistic } from '@/constants/statistic';
 import knowMoreAboutTeam from '@/assets/images/knowMoreAboutTeam.png';
@@ -14,8 +12,7 @@ import Join from '@/components/Join';
 
 import styles from './page.module.scss';
 
-export default function About({ params: { locale } }: ParamsLocale) {
-  unstable_setRequestLocale(locale);
+export default function About() {
   const translation = useTranslations('about');
   const messages = useMessages();
 

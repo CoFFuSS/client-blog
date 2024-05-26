@@ -1,18 +1,15 @@
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-import { unstable_setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider, useMessages, useTranslations } from 'next-intl';
 import Link from 'next/link';
 
-import { ParamsLocale } from '@/types/common';
 import ContactForm from '@/components/ContactForm';
 import { pickMessages } from '@/utils/pickMessages';
 import { Map } from '@/components/Map';
 
 import styles from './page.module.scss';
 
-export default function Contact({ params: { locale } }: ParamsLocale) {
-  unstable_setRequestLocale(locale);
+export default function Contact() {
   const translation = useTranslations('contact');
   const messages = useMessages();
 

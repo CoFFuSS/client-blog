@@ -2,13 +2,15 @@ import '@/styles/globals.scss';
 
 import { Sen } from 'next/font/google';
 import type { Metadata } from 'next';
-import { unstable_setRequestLocale } from 'next-intl/server';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
+import { notFound } from 'next/navigation';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { pickMessages } from '@/utils/pickMessages';
-import { locales } from '@/config';
+
+import en from '../../../messages/en.json';
+import ru from '../../../messages/ru.json';
 
 const sen = Sen({ subsets: ['latin'], weight: ['400', '500', '700'] });
 
@@ -22,13 +24,16 @@ export const metadata: Metadata = {
   description: 'Client Blog Application with next.js',
 };
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
-
 export default function LocaleLayout({ children, params: { locale } }: LocaleLayoutProps) {
-  unstable_setRequestLocale(locale);
-  const messages = useMessages();
+  let messages;
+
+  if (locale === 'ru') {
+    messages = ru;
+  } else if (locale === 'en') {
+    messages = en;
+  } else {
+    notFound();
+  }
 
   return (
     <html lang={locale}>
@@ -36,8 +41,14 @@ export default function LocaleLayout({ children, params: { locale } }: LocaleLay
         <NextIntlClientProvider messages={pickMessages(messages, 'header')}>
           <Header />
         </NextIntlClientProvider>
-        {children}
-        <Footer />
+        <NextIntlClientProvider
+          locale={locale}
+          messages={messages}
+        >
+          {children}
+
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
