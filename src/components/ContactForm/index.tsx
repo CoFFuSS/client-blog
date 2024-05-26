@@ -19,7 +19,7 @@ export default function ContactForm() {
   const [disabled, setDisabled] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const t = useTranslations('contact.form');
+  const translation = useTranslations('contact.form');
   const {
     register,
     handleSubmit,
@@ -50,9 +50,7 @@ export default function ContactForm() {
       setDisabled(false);
       setIsLoading(false);
 
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 2500);
+      setIsSuccess(false);
     }
   };
 
@@ -65,7 +63,7 @@ export default function ContactForm() {
         <Fragment key={dataCy}>
           <Input
             variant={variant}
-            placeholder={t(`${placeholder}`)}
+            placeholder={translation(`${placeholder}`)}
             dataCy={dataCy}
             type={type}
             {...register(name)}
@@ -95,7 +93,7 @@ export default function ContactForm() {
       <div>
         <textarea
           className={styles.textarea}
-          placeholder={t('inputs.message')}
+          placeholder={translation('inputs.message')}
           id='message'
           {...register('message')}
         />
@@ -108,7 +106,7 @@ export default function ContactForm() {
         disabled={disabled || !isDirty || !isValid}
       >
         <h4>
-          {t('button')} <span>{'>'}</span>
+          {translation('button')} <span>{'>'}</span>
         </h4>
         {isLoading && <Loader />}
       </Button>
@@ -117,7 +115,7 @@ export default function ContactForm() {
           data-cy='success'
           className={styles.success}
         >
-          {t('success')}
+          {translation('success')}
         </p>
       )}
     </form>

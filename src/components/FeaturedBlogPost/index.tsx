@@ -20,7 +20,7 @@ interface FeaturedBlogPostProps {
 }
 
 const FeaturedBlogPost = memo(({ title, author, date, text, id }: FeaturedBlogPostProps) => {
-  const t = useTranslations('home.hero');
+  const translation = useTranslations('home.hero');
   const router = useRouter();
 
   const handleRedirectPost = () => router.push(`${routes.blog}/${id}`);
@@ -28,10 +28,10 @@ const FeaturedBlogPost = memo(({ title, author, date, text, id }: FeaturedBlogPo
   return (
     <section className={styles.post}>
       <div className={styles.post__info}>
-        <h5>{t('subtitle')}</h5>
+        <h5>{translation('subtitle')}</h5>
         <h2 className={styles.post__title}>{title}</h2>
         <h6>
-          {t('by')} <span className={styles.post__name}>{author}</span> | {date}
+          {translation('by')} <span className={styles.post__name}>{author}</span> | {date}
         </h6>
         <p className={styles.post__text}>{text}</p>
         <Button
@@ -39,7 +39,7 @@ const FeaturedBlogPost = memo(({ title, author, date, text, id }: FeaturedBlogPo
           onClick={handleRedirectPost}
         >
           <h4>
-            {t('readMoreBtn')} <span>{'>'}</span>
+            {translation('readMoreBtn')} <span>{'>'}</span>
           </h4>
         </Button>
       </div>

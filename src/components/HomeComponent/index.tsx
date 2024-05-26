@@ -1,7 +1,6 @@
 'use client';
 
 import { AbstractIntlMessages, NextIntlClientProvider } from 'next-intl';
-import { Fragment } from 'react';
 
 import { pickMessages } from '@/utils/pickMessages';
 import { componentsToShow } from '@/constants/componentToShow';
@@ -26,9 +25,7 @@ export default function HomeComponent({ locale, messages }: HomeComponentProps) 
       <Hero />
       <div className={styles.content}>
         {componentsToShow.slice(0, showItems).map(({ component: Component, id }) => (
-          <Fragment key={id}>
-            <Component />
-          </Fragment>
+          <Component key={id} />
         ))}
         <div ref={observerTarget} />
       </div>

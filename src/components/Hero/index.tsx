@@ -7,21 +7,21 @@ import Button from '@/components/Button';
 import styles from './styles.module.scss';
 
 export default function Hero() {
-  const t = useTranslations('home.hero');
+  const translation = useTranslations('home.hero');
 
   return (
     <div className={styles.container}>
-      <h6>{t('posted')}</h6>
-      <h1 className={styles.title}>{t('title')}</h1>
+      <h6>{translation('posted')}</h6>
+      <h1 className={styles.title}>{translation('title')}</h1>
       <h6>
-        {t('by')} <span className={styles.name}>James West</span> | {t('date')}
+        {translation('by')} <span className={styles.name}>James West</span> | {translation('date')}
       </h6>
-      <h6 className={styles.text}>{t('text')}</h6>
+      <h6 className={styles.text}>{translation('text')}</h6>
       <Button
         dataCy='learn-more-button'
         variant='primary'
       >
-        <Link href={routes.blog}>{t('readMoreBtn')} </Link>
+        <Link href={routes.blog}>{translation('readMoreBtn')} </Link>
         <span>{'>'}</span>
       </Button>
     </div>

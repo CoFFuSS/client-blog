@@ -14,7 +14,7 @@ interface CategoryProps {
 }
 
 export default function Category({ params: { name } }: CategoryProps) {
-  const t = useTranslations('category');
+  const translation = useTranslations('category');
   const messages = useMessages();
 
   const filteredByCategory = useMemo(
@@ -25,7 +25,7 @@ export default function Category({ params: { name } }: CategoryProps) {
   return (
     <main>
       <header className={styles.header}>
-        <h1>{t(`${name.toLowerCase()}.title`)}</h1>
+        <h1>{translation(`${name.toLowerCase()}.title`)}</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore.
@@ -35,9 +35,9 @@ export default function Category({ params: { name } }: CategoryProps) {
             className={styles.category__link}
             href={routes.blog}
           >
-            {t('breadcrumbs.blog')}
+            {translation('breadcrumbs.blog')}
           </Link>{' '}
-          {'>'} {t(`${name.toLowerCase()}.title`)}
+          {'>'} {translation(`${name.toLowerCase()}.title`)}
         </span>
       </header>
       <NextIntlClientProvider messages={pickMessages(messages, 'category')}>

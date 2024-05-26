@@ -9,7 +9,7 @@ import Button from '@/components/Button';
 import styles from './styles.module.scss';
 
 export default function Backstory() {
-  const t = useTranslations('home.backstory');
+  const translation = useTranslations('home.backstory');
 
   return (
     <section className={styles.container}>
@@ -19,8 +19,8 @@ export default function Backstory() {
         alt='backstory-background'
       />
       <div className={styles.content}>
-        <h5 className={styles.subtitle}>{t('subtitle')}</h5>
-        <h1 className={styles.title}>{t('title')}</h1>
+        <h5 className={styles.subtitle}>{translation('subtitle')}</h5>
+        <h1 className={styles.title}>{translation('title')}</h1>
         <p className={styles.text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -32,7 +32,7 @@ export default function Backstory() {
         >
           <h5>
             <Link href={routes.about}>
-              {t('button')} <span>{'>'}</span>
+              {translation('button')} <span>{'>'}</span>
             </Link>
           </h5>
         </Button>

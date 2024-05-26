@@ -7,17 +7,17 @@ import { routes } from '@/constants/routes';
 import styles from './styles.module.scss';
 
 export default function Join() {
-  const t = useTranslations('home.join');
+  const translation = useTranslations('home.join');
 
   return (
     <section className={styles.container}>
-      <h1>{t('title')}</h1>
-      <p>{t('text')}</p>
+      <h1>{translation('title')}</h1>
+      <p>{translation('text')}</p>
       <Button
         variant='primary'
         dataCy='join-now-button'
       >
-        <Link href={routes.contact}>{t('button')}</Link>
+        <Link href={routes.contact}>{translation('button')}</Link>
       </Button>
     </section>
   );

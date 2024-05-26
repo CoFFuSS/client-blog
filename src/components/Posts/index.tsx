@@ -10,7 +10,7 @@ import FeaturedPost from '@/components/FeaturedPost';
 import styles from './styles.module.scss';
 
 export default function Posts() {
-  const t = useTranslations('home.posts');
+  const translation = useTranslations('home.posts');
   const {
     author: featuredAuthor,
     image,
@@ -31,7 +31,7 @@ export default function Posts() {
           id={featuredId}
           title={title}
           content={text}
-          buttonText={t('featured.post.readMoreBtn')}
+          buttonText={translation('featured.post.readMoreBtn')}
         />
       </div>
       <div className={styles.posts}>

@@ -16,7 +16,7 @@ import styles from './page.module.scss';
 
 export default function About({ params: { locale } }: ParamsLocale) {
   unstable_setRequestLocale(locale);
-  const t = useTranslations('about');
+  const translation = useTranslations('about');
   const messages = useMessages();
 
   return (
@@ -24,8 +24,8 @@ export default function About({ params: { locale } }: ParamsLocale) {
       <div>
         <div className={styles.about__upper}>
           <div className={styles.about__main}>
-            <h5>{t('subtitle')}</h5>
-            <h1>{t('title')}</h1>
+            <h5>{translation('subtitle')}</h5>
+            <h1>{translation('title')}</h1>
           </div>
           <div className={styles.about__bottom}>
             <p>
@@ -41,7 +41,7 @@ export default function About({ params: { locale } }: ParamsLocale) {
               {statistic.map(({ number, id, label }) => (
                 <li key={id}>
                   <span>{number}</span>
-                  <p>{t(`statistic.${label}`)}</p>
+                  <p>{translation(`statistic.${label}`)}</p>
                 </li>
               ))}
             </ul>
@@ -53,8 +53,8 @@ export default function About({ params: { locale } }: ParamsLocale) {
         </div>
         <div className={styles.mission}>
           <div className={styles.mission__column}>
-            <h5>{t('mission.subtitle')}</h5>
-            <h3>{t('mission.title')}</h3>
+            <h5>{translation('mission.subtitle')}</h5>
+            <h3>{translation('mission.title')}</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque
@@ -62,8 +62,8 @@ export default function About({ params: { locale } }: ParamsLocale) {
             </p>
           </div>
           <div>
-            <h5>{t('vision.subtitle')}</h5>
-            <h3>{t('vision.title')}</h3>
+            <h5>{translation('vision.subtitle')}</h5>
+            <h3>{translation('vision.title')}</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque
@@ -75,7 +75,7 @@ export default function About({ params: { locale } }: ParamsLocale) {
 
       <div className={styles.team}>
         <div className={styles.team__info}>
-          <h1>{t('team.title')}</h1>
+          <h1>{translation('team.title')}</h1>
           <h4>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt.
@@ -103,7 +103,7 @@ export default function About({ params: { locale } }: ParamsLocale) {
           />
         </div>
         <div className={styles.why__info}>
-          <h2>{t('why.title')}</h2>
+          <h2>{translation('why.title')}</h2>
           <h4>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt.
@@ -117,7 +117,7 @@ export default function About({ params: { locale } }: ParamsLocale) {
         </div>
       </div>
       <div className={styles.authors}>
-        <h2>{t('authors.title')}</h2>
+        <h2>{translation('authors.title')}</h2>
         <div className={styles.authors__list}>
           {authors.map(({ avatar, name, role, company, id }) => (
             <AuthorCard

@@ -18,9 +18,12 @@ interface CategorySectionProps {
 }
 
 export default function CategorySection({ posts: currentPosts, name }: CategorySectionProps) {
-  const t = useTranslations('category');
+  const translation = useTranslations('category');
   const [posts, setPosts] = useState<BlogPostFields[]>(currentPosts);
-  const categories = useMemo(() => categoryCards.map(({ label }) => t(`${label}.title`)), [t]);
+  const categories = useMemo(
+    () => categoryCards.map(({ label }) => translation(`${label}.title`)),
+    [translation],
+  );
 
   return (
     <section className={styles.section}>
@@ -42,21 +45,21 @@ export default function CategorySection({ posts: currentPosts, name }: CategoryS
             />
           ))
         ) : (
-          <h2>{t('noPosts')}</h2>
+          <h2>{translation('noPosts')}</h2>
         )}
       </div>
       <div className={styles.section__sidebar}>
         <Search
-          placeholder={t('placeholder')}
-          buttonText={t('buttonText')}
+          placeholder={translation('placeholder')}
+          buttonText={translation('buttonText')}
           posts={posts}
         />
-        <h2>{t('categoriesTitle')}</h2>
+        <h2>{translation('categoriesTitle')}</h2>
         <Categories
           categories={categories}
           name={name}
         />
-        <h2>{t('tagsTitle')}</h2>
+        <h2>{translation('tagsTitle')}</h2>
         <Tags
           posts={posts}
           setPosts={setPosts}

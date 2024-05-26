@@ -16,7 +16,7 @@ import styles from './styles.module.scss';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const t = useTranslations('header');
+  const translation = useTranslations('header');
 
   const handleToggleMenu = () => setIsOpen((prev) => !prev);
 
@@ -41,11 +41,11 @@ export default function Header() {
                   href={href}
                   data-cy={name}
                 >
-                  {t(`links.${name}`)}
+                  {translation(`links.${name}`)}
                 </NavigationLink>
               </li>
             ))}
-            <VideoModal buttonContent={t('button')} />
+            <VideoModal buttonContent={translation('button')} />
           </ul>
         </div>
       </div>

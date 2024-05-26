@@ -1,4 +1,4 @@
-import { ChangeEvent, useMemo, useState } from 'react';
+import { ChangeEvent, useCallback, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import cn from 'classnames';
@@ -21,7 +21,7 @@ export default function Search({ placeholder, buttonText, posts }: SearchProps) 
   const [filteredPosts, setFilteredPosts] = useState<BlogPostFields[]>([]);
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleSearch = useMemo(
+  const handleSearch = useCallback(
     () => (e: ChangeEvent<HTMLInputElement>) => {
       setSearchQuery(e.target.value);
 
