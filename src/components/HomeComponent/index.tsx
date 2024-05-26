@@ -1,6 +1,7 @@
 'use client';
 
 import { AbstractIntlMessages, NextIntlClientProvider } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { pickMessages } from '@/utils/pickMessages';
 import { componentsToShow } from '@/constants/componentToShow';
@@ -15,6 +16,7 @@ interface HomeComponentProps {
 }
 
 export default function HomeComponent({ locale, messages }: HomeComponentProps) {
+  unstable_setRequestLocale(locale);
   const [showItems, observerTarget] = useInfiniteScrolling();
 
   return (
