@@ -1,4 +1,3 @@
-import { unstable_setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 import { ParamsLocale } from '@/types/common';
@@ -12,7 +11,6 @@ import BlogPosts from '@/components/BlogPosts';
 import styles from './page.module.scss';
 
 export default function Blog({ params: { locale } }: ParamsLocale) {
-  unstable_setRequestLocale(locale);
   const messages = useMessages();
 
   const { title, author, date, text, id } = blogPosts[0];
