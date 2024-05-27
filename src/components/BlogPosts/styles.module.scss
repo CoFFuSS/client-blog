@@ -1,0 +1,88 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: $s32;
+  padding: $s64 $s80;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $s64;
+
+    padding: $s64 0;
+
+    border-top: 1px solid $light-gray;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: $s16;
+  justify-content: center;
+  margin-top: $s64;
+}
+
+.button {
+  cursor: pointer;
+
+  color: $violet;
+
+  background: none;
+  border: none;
+  outline: none;
+
+  transition: all 0.2s linear;
+
+  &:disabled {
+    cursor: default;
+    color: $gray;
+  }
+}
+
+.animate {
+  animation: slide-in-initial 0.4s;
+
+  &__next {
+    animation: slide-in-next 0.4s;
+  }
+
+  &__prev {
+    animation: slideInPrev 0.4s;
+  }
+}
+
+@keyframes slide-in-initial {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-next {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-prev {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

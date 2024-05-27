@@ -1,0 +1,39 @@
+.button {
+  cursor: pointer;
+
+  display: flex;
+
+  padding: $s8 38px;
+
+  color: $dark-gray;
+
+  background-color: $white;
+  border: 1px solid $dark-gray;
+  border-radius: $s28;
+
+  &.active {
+    background-color: $yellow;
+    border: 1px solid transparent;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $yellow;
+  }
+}
+
+.container {
+  flex-direction: column;
+  gap: $s16;
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: $s8;
+  margin-bottom: $s16;
+}
+
+.clear {
+  justify-self: start;
+}

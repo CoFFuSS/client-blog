@@ -1,0 +1,20 @@
+.arrow {
+  cursor: pointer;
+}
+
+.circle {
+  transition: fill 0.2s linear;
+}
+
+.path {
+  fill: $dark-blue;
+  transition: fill 0.2s linear;
+}
+
+.arrow:hover .path {
+  fill: $white;
+}
+
+.arrow:hover .circle {
+  fill: $dark-blue;
+}

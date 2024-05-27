@@ -1,0 +1,30 @@
+.container {
+  @include respond('desktop') {
+    flex-direction: column;
+  }
+
+  display: flex;
+  flex-direction: row;
+  gap: $s32;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: $s32;
+}
+
+.posts {
+  height: 100%;
+
+  .posts-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .link {
+    color: $violet;
+  }
+}

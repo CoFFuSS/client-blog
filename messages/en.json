@@ -1,0 +1,183 @@
+{
+  "home": {
+    "hero": {
+      "posted": "Posted on startup",
+      "title": "Step-by-step guide to choosing great font pairs",
+      "subtitle": "Featured Post",
+      "date": "May 23, 2022",
+      "by": "By",
+      "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "readMoreBtn": "Read More"
+    },
+
+    "posts": {
+      "featured": {
+        "title": "Featured Post",
+        "post": {
+          "readMoreBtn": "Read More"
+        }
+      },
+      "all": {
+        "title": "All Posts",
+        "link": "View all"
+      }
+    },
+
+    "category": {
+      "title": "Choose A Catagory",
+      "business": {
+        "title": "Business"
+      },
+      "startup": {
+        "title": "Startup"
+      },
+      "economy": {
+        "title": "Economy"
+      },
+      "technology": {
+        "title": "Technology"
+      }
+    },
+
+    "backstory": {
+      "subtitle": "Why we started",
+      "title": "It started out as a simple idea and evolved into our passion",
+      "button": "Discover More"
+    },
+
+    "authors": {
+      "title": "List of Authors"
+    },
+
+    "logo": {
+      "subtitle": "We are",
+      "title": "Featured In"
+    },
+
+    "testimonials": {
+      "subtitle": "TESTIMONIALs",
+      "title": "What people say about our blog"
+    },
+
+    "join": {
+      "title": "Join our team to be a part of our story",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "button": "Join now"
+    },
+
+    "title": "Home",
+    "path": "/"
+  },
+
+  "privacy": {
+    "title": "Privacy Policy",
+    "info": "Last Updated on 27th January 2022"
+  },
+
+  "contact": {
+    "title": "Let’s Start a Conversation",
+    "subtitle": "Contact us",
+    "form": {
+      "inputs": {
+        "name": "Full Name  ",
+        "email": "Your Email",
+        "message": "Message"
+      },
+      "button": "Send Message"
+    }
+  },
+
+  "about": {
+    "subtitle": "ABOUT US",
+    "title": "We are a team of content writers who share their learnings",
+    "statistic": {
+      "published": "Published",
+      "views": "Views",
+      "activeUsers": "Active users"
+    },
+    "mission": {
+      "title": "Creating valuable content for creatives all around the world",
+      "subtitle": "Our mision"
+    },
+    "vision": {
+      "title": "A platform that empowers individuals to improve",
+      "subtitle": "Our Vision"
+    },
+
+    "team": {
+      "title": "Our team of creatives"
+    },
+
+    "why": {
+      "title": "Why we started this Blogs"
+    },
+
+    "author": {
+      "title": "Hey there, welcome to my blog",
+      "noAuthor": "No author by id",
+      "postTitle": "My Posts"
+    }
+  },
+
+  "author": {
+    "title": "Hey there, welcome to my blog",
+    "noAuthor": "No author by id",
+    "postTitle": "My Posts"
+  },
+
+  "posts": {
+    "title": "All posts",
+    "prev": "Prev",
+    "next": "Next",
+    "noPosts": "There is no post that you are searching for",
+    "back": "Go back to posts",
+    "backBtn": "Back",
+    "readNext": "What to read next"
+  },
+
+  "category": {
+    "breadcrumbs": {
+      "blog": "Blog",
+      "nextInfo": "> {name}"
+    },
+    "business": {
+      "title": "Business"
+    },
+    "startup": {
+      "title": "Startup"
+    },
+    "economy": {
+      "title": "Economy"
+    },
+    "technology": {
+      "title": "Technology"
+    },
+    "noPosts": "No posts by this category",
+    "categoriesTitle": "Categories",
+    "tagsTitle": "All tags",
+    "placeholder": "Search for tag...",
+    "buttonText": "Search",
+    "buttonClear": "Clear tags"
+  },
+
+  "header": {
+    "links": {
+      "Home": "Home",
+      "Blog": "Blog",
+      "About": "About",
+      "Contact": "Contact"
+    },
+    "button": "Video about us"
+  },
+
+  "footer": {
+    "links": {
+      "Home": "Home",
+      "Blog": "Blog",
+      "About": "About",
+      "Contact": "Contact",
+      "Privacy": "Privacy Policy"
+    },
+    "button": "Subscribe"
+  }
+}

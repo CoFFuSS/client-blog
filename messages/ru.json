@@ -1,0 +1,179 @@
+{
+  "home": {
+    "hero": {
+      "posted": "Опубликовано на стартапе",
+      "title": "Пошаговое руководство по подбору отличных пар шрифтов",
+      "subtitle": "Избранный пост",
+      "date": "Май 23, 2022",
+      "by": "От",
+      "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "readMoreBtn": "Читать далее"
+    },
+
+    "posts": {
+      "featured": {
+        "title": "Избранный пост",
+        "post": {
+          "readMoreBtn": "Читать далее"
+        }
+      },
+      "all": {
+        "title": "Все посты",
+        "link": "Посмотреть все"
+      }
+    },
+
+    "category": {
+      "title": "Выберете категорию",
+      "business": {
+        "title": "Что за бизнес"
+      },
+      "startup": {
+        "title": "Стартапчик"
+      },
+      "economy": {
+        "title": "Економика"
+      },
+      "technology": {
+        "title": "Технологии"
+      }
+    },
+
+    "backstory": {
+      "subtitle": "Почему мы начали",
+      "title": "Мы начали с простой идеи и переросло в наше хобби",
+      "button": "Рассмотреть нашу историю"
+    },
+
+    "authors": {
+      "title": "Список авторов"
+    },
+
+    "logo": {
+      "subtitle": "Мы",
+      "title": "представлены в"
+    },
+
+    "testimonials": {
+      "subtitle": "РЕКОМЕНДАЦИИ",
+      "title": "Что люди говорят о нашем блоге"
+    },
+
+    "join": {
+      "title": "Присоеденяйтесь к нашей команде что бы стать частью нашей истории",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "button": "Присоеденяйтесь сейчас"
+    },
+
+    "title": "Главная",
+    "path": "/"
+  },
+
+  "privacy": {
+    "title": "Политика конфиденциальности",
+    "info": "Последнее обновление 27 января 2022"
+  },
+
+  "contact": {
+    "title": "Давайте начнем разговор",
+    "subtitle": "СВЯЗАТЬСЯ С НАМИ",
+    "form": {
+      "inputs": {
+        "name": "Полное имя",
+        "email": "Ваша почта",
+        "message": "Сообщение"
+      },
+      "button": "Отправить сообщение"
+    }
+  },
+
+  "about": {
+    "subtitle": "О НАС",
+    "title": "Мы - команда авторов контента, которые делятся своими наработками",
+    "statistic": {
+      "published": "Опубликовано",
+      "views": "Просмотров",
+      "activeUsers": "Активных пользователей"
+    },
+    "mission": {
+      "title": "Создание ценного контента для творческих людей по всему миру",
+      "subtitle": "Наша миссия"
+    },
+    "vision": {
+      "title": "Платформа, позволяющая людям улучшать",
+      "subtitle": "Наше видение"
+    },
+
+    "team": {
+      "title": "Наша команда креативщиков"
+    },
+
+    "why": {
+      "title": "Почему мы начали вести эти блоги"
+    },
+
+    "author": {
+      "title": "Привет, добро пожаловать в мой блог.",
+      "noAuthor": "Нет автора по идентификатору",
+      "postTitle": "Мои посты"
+    }
+  },
+
+  "posts": {
+    "title": "Все посты",
+    "prev": "Предыдущая",
+    "next": "Следующая",
+    "noPosts": "Постов нет(",
+    "back": "Вернутся к постам",
+    "backBtn": "Назад",
+    "readNext": "Что почитать дальше"
+  },
+
+  "category": {
+    "breadcrumbs": {
+      "blog": "Блог",
+      "nextInfo": "> {name}"
+    },
+    "business": {
+      "title": "Бизнес"
+    },
+    "startup": {
+      "title": "Стартап"
+    },
+    "economy": {
+      "title": "Экономика"
+    },
+    "technology": {
+      "title": "Технологии"
+    },
+    "noPosts": "Нет постов в этой категории",
+    "categoriesTitle": "Категории",
+    "tagsTitle": "Все теги",
+    "placeholder": "Искать по тегу...",
+    "buttonText": "Искать",
+    "buttonClear": "Очистить теги"
+  },
+
+  "header": {
+    "links": {
+      "Home": "Главная",
+      "Blog": "Блог",
+      "About": "О нас",
+      "Contact": "Контакты"
+    },
+
+    "button": "Видео о нас"
+  },
+
+  "footer": {
+    "links": {
+      "Home": "Главная",
+      "Blog": "Блог",
+      "About": "О нас",
+      "Contact": "Контакты",
+      "Privacy": "Политика конфиденциальности"
+    },
+
+    "button": "Подписаться"
+  }
+}

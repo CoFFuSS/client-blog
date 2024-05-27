@@ -1,0 +1,19 @@
+.container {
+  @include respond('desktop') {
+    padding: $s20 $s12;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: $s20;
+  align-items: center;
+  justify-content: center;
+
+  padding: $s40 $s28;
+
+  background-color: $lavender;
+
+  &:hover {
+    background-color: $light-yellow;
+  }
+}

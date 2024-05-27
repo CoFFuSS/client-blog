@@ -1,0 +1,28 @@
+.section {
+  @include respond('desktop') {
+    flex-direction: column;
+    gap: $s32;
+    padding: $s32 $s16;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $s128 $s80;
+
+  &__posts {
+    display: flex;
+    flex-direction: column;
+    gap: $s32;
+  }
+
+  &__sidebar {
+    @include respond('desktop') {
+      gap: $s24;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: $s64;
+  }
+}

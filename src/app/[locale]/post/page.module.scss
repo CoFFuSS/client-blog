@@ -1,0 +1,11 @@
+.container {
+  @include respond('desktop') {
+    gap: $s32;
+    padding-bottom: $s32;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: $s128;
+  padding-bottom: $s128;
+}
