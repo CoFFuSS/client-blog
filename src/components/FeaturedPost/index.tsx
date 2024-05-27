@@ -23,7 +23,7 @@ const FeaturedPost = memo(
   ({ author, content, title, date, buttonText, id, image }: FeaturedPostProps) => {
     const router = useRouter();
 
-    const redirectOnClick = () => router.push(`${routes.blog}/${id}`);
+    const handleRedirect = () => router.push(`${routes.blog}/${id}`);
 
     return (
       <div className={styles.container}>
@@ -43,7 +43,7 @@ const FeaturedPost = memo(
         <Button
           dataCy='feature-post-button'
           variant='primary'
-          onClick={redirectOnClick}
+          onClick={handleRedirect}
         >
           {buttonText} <span>{'>'}</span>
         </Button>
