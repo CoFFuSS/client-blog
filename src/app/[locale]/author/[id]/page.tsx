@@ -14,7 +14,7 @@ interface AuthorProps {
 }
 
 export default function Authors({ params: { id } }: AuthorProps) {
-  const t = useTranslations('author');
+  const translation = useTranslations('author');
 
   const currentAuthor = useMemo(() => authors.find(({ id: currentId }) => currentId === +id), [id]);
 
@@ -29,13 +29,13 @@ export default function Authors({ params: { id } }: AuthorProps) {
   if (!currentAuthor) {
     return (
       <h1>
-        {t('noAuthor')} {id}
+        {translation('noAuthor')} {id}
       </h1>
     );
   }
 
   if (authorPosts.length === 0) {
-    return <h1>{t('noAuthorPosts')}</h1>;
+    return <h1>{translation('noAuthorPosts')}</h1>;
   }
 
   const { avatar, name } = currentAuthor;
@@ -48,7 +48,7 @@ export default function Authors({ params: { id } }: AuthorProps) {
           alt={name}
         />
         <div className={styles.profile__upper}>
-          <h1>{t('title', { name })}</h1>
+          <h1>{translation('title')}</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque
@@ -58,7 +58,7 @@ export default function Authors({ params: { id } }: AuthorProps) {
         </div>
       </div>
       <div className={styles.posts}>
-        <h1>{t('postTitle')}</h1>
+        <h1>{translation('postTitle')}</h1>
         <div className={styles.posts__list}>
           {authorPosts.map((post: BlogPostFields) => (
             <BlogPostCard

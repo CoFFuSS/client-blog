@@ -1,6 +1,7 @@
 import { useTranslations, useMessages, NextIntlClientProvider } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useMemo } from 'react';
 
 import { blogPosts } from '@/constants/blogPosts';
 import { routes } from '@/constants/routes';
@@ -16,19 +17,25 @@ interface PostProps {
 }
 
 export default function Post({ params: { id } }: PostProps) {
-  const t = useTranslations('posts');
+  const translation = useTranslations('posts');
   const messages = useMessages();
-  const currentPost = blogPosts.find((post) => post.id === +id);
+
+  const currentPost = useMemo(() => blogPosts.find((post) => post.id === +id), [id]);
+
+  const profileImage = useMemo(
+    () => authors.find((currAuthor) => currAuthor.name === currentPost?.author)?.avatar,
+    [currentPost?.author],
+  );
 
   if (!currentPost) {
     return (
       <div className={styles.wrapper}>
-        <h1>{t('noPosts')}</h1>
+        <h1>{translation('noPosts')}</h1>
         <Link
           className={styles.link}
           href={routes.blog}
         >
-          {'<'} {t('back')}
+          {'<'} {translation('back')}
         </Link>
       </div>
     );
@@ -44,18 +51,17 @@ export default function Post({ params: { id } }: PostProps) {
     title,
   } = currentPost;
 
-  const profileImage = authors.find((currAuthor) => currAuthor.name === author)?.avatar;
-
   return (
     <main className={styles.container}>
       <section className={styles.section}>
         <div className={styles.content}>
           <div className={styles.content__author}>
-            <Image
-              src={profileImage!}
-              alt={author}
-            />
-
+            {profileImage && (
+              <Image
+                src={profileImage}
+                alt={author}
+              />
+            )}
             <div>
               <h3>{author}</h3>
               <p>{date}</p>

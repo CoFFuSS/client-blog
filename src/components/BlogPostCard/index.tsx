@@ -8,7 +8,10 @@ import styles from './styles.module.scss';
 
 export default function BlogPostCard({ image, category, title, text, id }: BlogPostFields) {
   return (
-    <section className={styles.card}>
+    <section
+      className={styles.card}
+      data-cy='blog-post-card'
+    >
       <div>
         <Image
           className={styles.card__image}

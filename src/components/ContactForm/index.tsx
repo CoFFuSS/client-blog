@@ -19,7 +19,7 @@ export default function ContactForm() {
   const [disabled, setDisabled] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const t = useTranslations('contact.form');
+  const translation = useTranslations('contact.form');
   const {
     register,
     handleSubmit,
@@ -27,6 +27,7 @@ export default function ContactForm() {
     reset,
   } = useForm<FormValues>({
     resolver: zodResolver(contactFormSchema),
+    mode: 'onChange',
   });
 
   const onSubmit: SubmitHandler<FormValues> = async ({
@@ -49,9 +50,7 @@ export default function ContactForm() {
       setDisabled(false);
       setIsLoading(false);
 
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 2500);
+      setIsSuccess(false);
     }
   };
 
@@ -64,12 +63,12 @@ export default function ContactForm() {
         <Fragment key={dataCy}>
           <Input
             variant={variant}
-            placeholder={t(`${placeholder}`)}
+            placeholder={translation(`${placeholder}`)}
             dataCy={dataCy}
             type={type}
             {...register(name)}
           />
-          {errors[name] && <p>{errors[name]?.message}</p>}
+          {errors[name] && <h4 data-cy='error'>{errors[name]?.message}</h4>}
         </Fragment>
       ))}
 
@@ -94,11 +93,11 @@ export default function ContactForm() {
       <div>
         <textarea
           className={styles.textarea}
-          placeholder={t('inputs.message')}
+          placeholder={translation('inputs.message')}
           id='message'
           {...register('message')}
         />
-        {errors.message && <p>{errors.message.message}</p>}
+        {errors.message && <h4 data-cy='textarea-error'>{errors.message.message}</h4>}
       </div>
       <Button
         variant='primary'
@@ -107,7 +106,7 @@ export default function ContactForm() {
         disabled={disabled || !isDirty || !isValid}
       >
         <h4>
-          {t('button')} <span>{'>'}</span>
+          {translation('button')} <span>{'>'}</span>
         </h4>
         {isLoading && <Loader />}
       </Button>
@@ -116,7 +115,7 @@ export default function ContactForm() {
           data-cy='success'
           className={styles.success}
         >
-          {t('success')}
+          {translation('success')}
         </p>
       )}
     </form>

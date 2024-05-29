@@ -1,25 +1,23 @@
-import { unstable_setRequestLocale } from 'next-intl/server';
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 import { NextIntlClientProvider, useMessages, useTranslations } from 'next-intl';
 import Link from 'next/link';
 
-import 'mapbox-gl/dist/mapbox-gl.css';
-import { ParamsLocale } from '@/types/common';
 import ContactForm from '@/components/ContactForm';
 import { pickMessages } from '@/utils/pickMessages';
 import { Map } from '@/components/Map';
 
 import styles from './page.module.scss';
 
-export default function Contact({ params: { locale } }: ParamsLocale) {
-  unstable_setRequestLocale(locale);
-  const t = useTranslations('contact');
+export default function Contact() {
+  const translation = useTranslations('contact');
   const messages = useMessages();
 
   return (
     <main className={styles.container}>
       <div className={styles.content}>
-        <h5>{t('subtitle')}</h5>
-        <h1>{t('title')}</h1>
+        <h5>{translation('subtitle')}</h5>
+        <h1>{translation('title')}</h1>
         <p className={styles.content__text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim.

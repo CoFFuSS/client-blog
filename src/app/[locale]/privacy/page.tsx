@@ -1,19 +1,15 @@
-import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-
-import { ParamsLocale } from '@/types/common';
 
 import styles from './page.module.scss';
 
-export default function Privacy({ params: { locale } }: ParamsLocale) {
-  unstable_setRequestLocale(locale);
-  const t = useTranslations('privacy');
+export default function Privacy() {
+  const translation = useTranslations('privacy');
 
   return (
     <main>
       <section className={styles.upper}>
-        <h1>{t('title')}</h1>
-        <p>{t('info')}</p>
+        <h1>{translation('title')}</h1>
+        <p>{translation('info')}</p>
       </section>
 
       <article className={styles.content}>

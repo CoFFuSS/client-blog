@@ -21,15 +21,17 @@ export default function FooterForm() {
     try {
       await sendEmailFooter(data.email);
     } catch (err) {
-      const error = err as Error;
-
-      throw new Error(`Something went wrong:${error.message}`);
+      if (err instanceof Error) {
+        console.error(`Something went wrong: ${err.message}`);
+      } else {
+        console.error('An unexpected error occurred', err);
+      }
     }
   };
 
   return (
     <div className={styles.container}>
-      <h1>Subscribe to our news letter to get latest updates and news</h1>
+      <h1>Subscribe to our newsletter to get the latest updates and news</h1>
       <form
         onSubmit={handleSubmit(handleSendEmail)}
         className={styles.form}

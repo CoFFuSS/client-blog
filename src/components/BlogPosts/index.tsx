@@ -1,23 +1,19 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import cn from 'classnames';
 
-import { blogPosts, postsPerPage } from '@/constants/blogPosts';
 import BlogPostCard from '@/components/BlogPostCard';
+import { blogPostMath } from '@/utils/blogPostsMath';
 
 import styles from './styles.module.scss';
 
 export default function BlogPosts() {
-  const t = useTranslations('posts');
+  const translation = useTranslations('posts');
   const [currentPage, setCurrentPage] = useState(0);
   const [animation, setAnimation] = useState(styles.animate);
-
-  const totalPages = Math.ceil(blogPosts.length / postsPerPage);
-  const start = currentPage * postsPerPage;
-  const end = start + postsPerPage;
-  const pagedPosts = blogPosts.slice(start, end);
+  const [totalPages, pagedPosts] = useMemo(() => blogPostMath(currentPage), [currentPage]);
 
   const handlePrevPage = () => {
     setCurrentPage((page) => page - 1);
@@ -31,7 +27,7 @@ export default function BlogPosts() {
 
   return (
     <section className={styles.posts}>
-      <h1>{t('title')}</h1>
+      <h1>{translation('title')}</h1>
       <div
         className={cn(styles.posts__list, animation)}
         key={currentPage}
@@ -51,7 +47,7 @@ export default function BlogPosts() {
           onClick={handlePrevPage}
         >
           <h4>
-            {'<'} {t('prev')}
+            {'<'} {translation('prev')}
           </h4>
         </button>
         <button
@@ -61,7 +57,7 @@ export default function BlogPosts() {
           onClick={handleNextPage}
         >
           <h4>
-            {t('next')} {'>'}
+            {translation('next')} {'>'}
           </h4>
         </button>
       </div>

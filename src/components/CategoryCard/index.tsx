@@ -13,7 +13,7 @@ interface CategoryCardProps {
 }
 
 export default function CategoryCard({ icon, label, text }: CategoryCardProps) {
-  const t = useTranslations('home.category');
+  const translation = useTranslations('home.category');
 
   return (
     <div className={styles.container}>
@@ -22,7 +22,7 @@ export default function CategoryCard({ icon, label, text }: CategoryCardProps) {
           src={icon}
           alt='title'
         />
-        <h2>{t(`${label}.title`)}</h2>
+        <h2>{translation(`${label}.title`)}</h2>
         <p>{text}</p>
       </Link>
     </div>

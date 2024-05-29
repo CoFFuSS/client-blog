@@ -12,7 +12,7 @@ export default function LanguageSwitcher() {
   const router = useRouter();
   const pathName = usePathname();
   const locale = useLocale();
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     startTransition(() => {
@@ -25,7 +25,6 @@ export default function LanguageSwitcher() {
       <select
         defaultValue={locale}
         onChange={handleSelectChange}
-        disabled={isPending}
         className={styles.select}
       >
         {locales.map((lang) => (

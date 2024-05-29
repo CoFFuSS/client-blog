@@ -10,7 +10,7 @@ import SocialWrapper from '@/components/SocialWrapper';
 import styles from './styles.module.scss';
 
 export default function Footer() {
-  const t = useTranslations('footer');
+  const translation = useTranslations('footer');
 
   return (
     <footer className={styles.footer}>
@@ -22,7 +22,7 @@ export default function Footer() {
           <ul className={styles.links}>
             {footerRoutes.map(({ name, href }) => (
               <li key={name}>
-                <NavigationLink href={href}>{t(`links.${name}`)}</NavigationLink>
+                <NavigationLink href={href}>{translation(`links.${name}`)}</NavigationLink>
               </li>
             ))}
           </ul>

@@ -1,9 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useMemo } from 'react';
 
-import { blogPosts } from '@/constants/blogPosts';
 import RecommendedPost from '@/components/RecommendedPost';
+import { otherPostsFilters } from '@/utils/otherPostsFilters';
 
 import styles from './styles.module.scss';
 
@@ -12,15 +13,13 @@ interface OtherPostsProps {
 }
 
 export default function OtherPosts({ id }: OtherPostsProps) {
-  const t = useTranslations('posts');
-  const currentPostCategory = blogPosts.find(({ id: currId }) => currId === +id)?.category;
-  const filteredPosts = blogPosts
-    .filter(({ id: currId, category }) => currId !== id && category === currentPostCategory)
-    .slice(0, 3);
+  const translation = useTranslations('posts');
+
+  const [currentPostCategory, filteredPosts] = useMemo(() => otherPostsFilters(id), [id]);
 
   return (
     <section className={styles.section}>
-      <h1>{t('title')}</h1>
+      <h1>{translation('title')}</h1>
       <div className={styles.posts}>
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
@@ -31,7 +30,7 @@ export default function OtherPosts({ id }: OtherPostsProps) {
           ))
         ) : (
           <h3>
-            {t('noPosts')} {currentPostCategory?.toLocaleLowerCase()}
+            {translation('noPosts')} {currentPostCategory?.toLocaleLowerCase()}
           </h3>
         )}
       </div>
